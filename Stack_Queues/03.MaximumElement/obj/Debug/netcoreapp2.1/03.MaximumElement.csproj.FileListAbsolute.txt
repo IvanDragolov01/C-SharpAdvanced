@@ -1,0 +1,11 @@
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\03.MaximumElement\bin\Debug\netcoreapp2.1\03.MaximumElement.deps.json
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\03.MaximumElement\bin\Debug\netcoreapp2.1\03.MaximumElement.runtimeconfig.json
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\03.MaximumElement\bin\Debug\netcoreapp2.1\03.MaximumElement.runtimeconfig.dev.json
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\03.MaximumElement\bin\Debug\netcoreapp2.1\03.MaximumElement.dll
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\03.MaximumElement\bin\Debug\netcoreapp2.1\03.MaximumElement.pdb
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\03.MaximumElement\obj\Debug\netcoreapp2.1\03.MaximumElement.csprojAssemblyReference.cache
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\03.MaximumElement\obj\Debug\netcoreapp2.1\03.MaximumElement.csproj.CoreCompileInputs.cache
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\03.MaximumElement\obj\Debug\netcoreapp2.1\03.MaximumElement.AssemblyInfoInputs.cache
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\03.MaximumElement\obj\Debug\netcoreapp2.1\03.MaximumElement.AssemblyInfo.cs
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\03.MaximumElement\obj\Debug\netcoreapp2.1\03.MaximumElement.dll
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\03.MaximumElement\obj\Debug\netcoreapp2.1\03.MaximumElement.pdb
