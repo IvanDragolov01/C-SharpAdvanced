@@ -1,0 +1,10 @@
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\01.ReverseNumbersWithStack\bin\Debug\netcoreapp2.1\01.ReverseNumbersWithStack.deps.json
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\01.ReverseNumbersWithStack\bin\Debug\netcoreapp2.1\01.ReverseNumbersWithStack.runtimeconfig.json
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\01.ReverseNumbersWithStack\bin\Debug\netcoreapp2.1\01.ReverseNumbersWithStack.runtimeconfig.dev.json
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\01.ReverseNumbersWithStack\bin\Debug\netcoreapp2.1\01.ReverseNumbersWithStack.dll
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\01.ReverseNumbersWithStack\bin\Debug\netcoreapp2.1\01.ReverseNumbersWithStack.pdb
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\01.ReverseNumbersWithStack\obj\Debug\netcoreapp2.1\01.ReverseNumbersWithStack.csproj.CoreCompileInputs.cache
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\01.ReverseNumbersWithStack\obj\Debug\netcoreapp2.1\01.ReverseNumbersWithStack.AssemblyInfoInputs.cache
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\01.ReverseNumbersWithStack\obj\Debug\netcoreapp2.1\01.ReverseNumbersWithStack.AssemblyInfo.cs
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\01.ReverseNumbersWithStack\obj\Debug\netcoreapp2.1\01.ReverseNumbersWithStack.dll
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\01.ReverseNumbersWithStack\obj\Debug\netcoreapp2.1\01.ReverseNumbersWithStack.pdb

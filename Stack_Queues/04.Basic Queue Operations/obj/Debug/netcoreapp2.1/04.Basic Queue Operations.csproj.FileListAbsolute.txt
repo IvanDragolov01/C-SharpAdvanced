@@ -1,0 +1,11 @@
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\04.Basic Queue Operations\bin\Debug\netcoreapp2.1\04.Basic Queue Operations.deps.json
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\04.Basic Queue Operations\bin\Debug\netcoreapp2.1\04.Basic Queue Operations.runtimeconfig.json
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\04.Basic Queue Operations\bin\Debug\netcoreapp2.1\04.Basic Queue Operations.runtimeconfig.dev.json
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\04.Basic Queue Operations\bin\Debug\netcoreapp2.1\04.Basic Queue Operations.dll
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\04.Basic Queue Operations\bin\Debug\netcoreapp2.1\04.Basic Queue Operations.pdb
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\04.Basic Queue Operations\obj\Debug\netcoreapp2.1\04.Basic Queue Operations.csprojAssemblyReference.cache
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\04.Basic Queue Operations\obj\Debug\netcoreapp2.1\04.Basic Queue Operations.csproj.CoreCompileInputs.cache
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\04.Basic Queue Operations\obj\Debug\netcoreapp2.1\04.Basic Queue Operations.AssemblyInfoInputs.cache
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\04.Basic Queue Operations\obj\Debug\netcoreapp2.1\04.Basic Queue Operations.AssemblyInfo.cs
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\04.Basic Queue Operations\obj\Debug\netcoreapp2.1\04.Basic Queue Operations.dll
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\04.Basic Queue Operations\obj\Debug\netcoreapp2.1\04.Basic Queue Operations.pdb

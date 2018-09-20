@@ -1,0 +1,10 @@
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\10. Poisonous Plants\bin\Debug\netcoreapp2.1\10. Poisonous Plants.deps.json
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\10. Poisonous Plants\bin\Debug\netcoreapp2.1\10. Poisonous Plants.runtimeconfig.json
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\10. Poisonous Plants\bin\Debug\netcoreapp2.1\10. Poisonous Plants.runtimeconfig.dev.json
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\10. Poisonous Plants\bin\Debug\netcoreapp2.1\10. Poisonous Plants.dll
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\10. Poisonous Plants\bin\Debug\netcoreapp2.1\10. Poisonous Plants.pdb
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\10. Poisonous Plants\obj\Debug\netcoreapp2.1\10. Poisonous Plants.csproj.CoreCompileInputs.cache
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\10. Poisonous Plants\obj\Debug\netcoreapp2.1\10. Poisonous Plants.AssemblyInfoInputs.cache
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\10. Poisonous Plants\obj\Debug\netcoreapp2.1\10. Poisonous Plants.AssemblyInfo.cs
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\10. Poisonous Plants\obj\Debug\netcoreapp2.1\10. Poisonous Plants.dll
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\10. Poisonous Plants\obj\Debug\netcoreapp2.1\10. Poisonous Plants.pdb

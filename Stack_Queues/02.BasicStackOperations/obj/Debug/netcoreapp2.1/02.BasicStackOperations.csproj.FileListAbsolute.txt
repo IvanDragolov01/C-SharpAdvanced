@@ -1,0 +1,10 @@
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\02.BasicStackOperations\bin\Debug\netcoreapp2.1\02.BasicStackOperations.deps.json
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\02.BasicStackOperations\bin\Debug\netcoreapp2.1\02.BasicStackOperations.runtimeconfig.json
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\02.BasicStackOperations\bin\Debug\netcoreapp2.1\02.BasicStackOperations.runtimeconfig.dev.json
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\02.BasicStackOperations\bin\Debug\netcoreapp2.1\02.BasicStackOperations.dll
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\02.BasicStackOperations\bin\Debug\netcoreapp2.1\02.BasicStackOperations.pdb
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\02.BasicStackOperations\obj\Debug\netcoreapp2.1\02.BasicStackOperations.csproj.CoreCompileInputs.cache
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\02.BasicStackOperations\obj\Debug\netcoreapp2.1\02.BasicStackOperations.AssemblyInfoInputs.cache
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\02.BasicStackOperations\obj\Debug\netcoreapp2.1\02.BasicStackOperations.AssemblyInfo.cs
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\02.BasicStackOperations\obj\Debug\netcoreapp2.1\02.BasicStackOperations.dll
+D:\CSharpAdvance\C-SharpAdvanced\Stack_Queues\02.BasicStackOperations\obj\Debug\netcoreapp2.1\02.BasicStackOperations.pdb
