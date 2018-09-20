@@ -1,0 +1,10 @@
+D:\CSharpAdvance\C-SharpAdvanced\08. Stack Fibonacci\bin\Debug\netcoreapp2.1\08. Stack Fibonacci.deps.json
+D:\CSharpAdvance\C-SharpAdvanced\08. Stack Fibonacci\bin\Debug\netcoreapp2.1\08. Stack Fibonacci.runtimeconfig.json
+D:\CSharpAdvance\C-SharpAdvanced\08. Stack Fibonacci\bin\Debug\netcoreapp2.1\08. Stack Fibonacci.runtimeconfig.dev.json
+D:\CSharpAdvance\C-SharpAdvanced\08. Stack Fibonacci\bin\Debug\netcoreapp2.1\08. Stack Fibonacci.dll
+D:\CSharpAdvance\C-SharpAdvanced\08. Stack Fibonacci\bin\Debug\netcoreapp2.1\08. Stack Fibonacci.pdb
+D:\CSharpAdvance\C-SharpAdvanced\08. Stack Fibonacci\obj\Debug\netcoreapp2.1\08. Stack Fibonacci.csproj.CoreCompileInputs.cache
+D:\CSharpAdvance\C-SharpAdvanced\08. Stack Fibonacci\obj\Debug\netcoreapp2.1\08. Stack Fibonacci.AssemblyInfoInputs.cache
+D:\CSharpAdvance\C-SharpAdvanced\08. Stack Fibonacci\obj\Debug\netcoreapp2.1\08. Stack Fibonacci.AssemblyInfo.cs
+D:\CSharpAdvance\C-SharpAdvanced\08. Stack Fibonacci\obj\Debug\netcoreapp2.1\08. Stack Fibonacci.dll
+D:\CSharpAdvance\C-SharpAdvanced\08. Stack Fibonacci\obj\Debug\netcoreapp2.1\08. Stack Fibonacci.pdb
