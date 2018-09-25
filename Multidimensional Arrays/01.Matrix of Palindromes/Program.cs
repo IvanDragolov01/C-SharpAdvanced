@@ -7,30 +7,59 @@ namespace _01.Matrix_of_Palindromes
     {
         static void Main(string[] args)
         {
-            char[] alphabet = "abcdefghijklmnopqrstuvwxyz".ToCharArray();
-            int[] rowsAndColumns = Console.ReadLine().Split(", ",
-            StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
-            int[,] matrix = new int[rowsAndColumns[0], rowsAndColumns[1]];
-            if (rowsAndColumns.Length <=27)
-            {
-                for (int rows = 0; rows < rowsAndColumns.Length; rows++)
-                {
-                    for (int col = 0; col < rowsAndColumns.Length; col++)
+            var rowsAndColumns = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            char[,] matrix = new char[rowsAndColumns[0], rowsAndColumns[1]];
+            char a = 'a';
+            char b = 'a';
+            for (int rows = 0; rows < rowsAndColumns[0]; rows++)
+             {
+                    for (int cols = 0; cols < rowsAndColumns[1]; cols++)
                     {
-                        
+                        Console.Write(a);
+                        Console.Write(b);
+                        Console.Write(a);
+                        Console.Write(" ");
+                        b++;
                     }
-                }
-                for (int rows = 0; rows < matrix.GetLength(0); rows++)
-                {
-                    for (int col = 0; col < matrix.GetLength(1); col++)
-                    {
-                        
-                    }
-                }
-                int r = matrix.GetLength(0);
-                int c = matrix.GetLength(1);
-                Console.WriteLine(alphabet[r]+alphabet[c]);
+             
+                Console.WriteLine();
+                a++;
+                b = a;
             }
         }
     }
 }
+
+/*
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace _1.MatrixOfPalindromes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            char[,] matrix = new char[input[0], input[1]];
+            char a = 'a';
+            char b = 'a';
+            for (int rows = 0; rows < input[0]; rows++)
+            {
+                for (int cols = 0; cols < input[1]; cols++)
+                {
+                    Console.Write(a);
+                    Console.Write(b);
+                    Console.Write(a);
+                    Console.Write(" ");
+                    b++;
+                }
+                Console.WriteLine();
+                a++;
+                b = a;
+            }
+        }
+    }
+}
+*/
