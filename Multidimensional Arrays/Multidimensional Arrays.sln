@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.2x2 Squares in Matrix", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Maximal Sum", "04.Maximal Sum\04.Maximal Sum.csproj", "{13EDE9DC-CD72-4C2B-9E46-5909EA0BE3A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Rubiks Matrix", "05. Rubiks Matrix\05. Rubiks Matrix.csproj", "{65F7379A-024F-4E16-8D2E-C67B28863AED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{13EDE9DC-CD72-4C2B-9E46-5909EA0BE3A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13EDE9DC-CD72-4C2B-9E46-5909EA0BE3A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13EDE9DC-CD72-4C2B-9E46-5909EA0BE3A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65F7379A-024F-4E16-8D2E-C67B28863AED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65F7379A-024F-4E16-8D2E-C67B28863AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65F7379A-024F-4E16-8D2E-C67B28863AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65F7379A-024F-4E16-8D2E-C67B28863AED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +87,7 @@ Global
 		{82477CF1-8C5E-4721-86BC-A1E9920BE0D0} = {F1FFC023-1BE9-4D0B-B1FB-B359D09B8A66}
 		{311563C5-5969-433C-9787-2E0C232497B6} = {F1FFC023-1BE9-4D0B-B1FB-B359D09B8A66}
 		{13EDE9DC-CD72-4C2B-9E46-5909EA0BE3A8} = {F1FFC023-1BE9-4D0B-B1FB-B359D09B8A66}
+		{65F7379A-024F-4E16-8D2E-C67B28863AED} = {F1FFC023-1BE9-4D0B-B1FB-B359D09B8A66}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4AB0B28F-7E95-4A45-BDCE-A27502DA6748}
