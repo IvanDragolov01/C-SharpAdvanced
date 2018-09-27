@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace _05._Rubiks_Matrix
 {
@@ -6,7 +7,8 @@ namespace _05._Rubiks_Matrix
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int[] rowsAndColumns = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
+            int[,] matrix = new int[rowsAndColumns[0], rowsAndColumns[1]];
         }
     }
 }
