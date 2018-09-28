@@ -22,6 +22,8 @@ namespace _06.Target_Practice
 
             stairs = FireShot(shot, stairs);
 
+            stairs = Gravity(stairs);
+
             PrintMatrix(stairs);
 
         }
