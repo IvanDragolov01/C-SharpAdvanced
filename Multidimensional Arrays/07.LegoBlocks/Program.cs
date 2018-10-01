@@ -7,58 +7,68 @@ namespace _07.LegoBlocks
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
-            int[][] array1 = new int[n][];
-            int[][] array2 = new int[n][];
-            bool a = false;
-            int count = 0;
+
+                int n = int.Parse(Console.ReadLine());
+
+                int[][] array1 = new int[n][];
+
+                int[][] array2 = new int[n][];
+
+                bool isMatch = true;
+
+                int count = 0;
 
                 for (int i = 0; i < n; i++)
+
                 {
                     array1[i] = Console.ReadLine()
                         .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+
                         .Select(int.Parse).ToArray();
+
                 }
 
                 for (int i = 0; i < n; i++)
+
                 {
                     array2[i] = Console.ReadLine()
+
                         .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+
                         .Select(int.Parse).Reverse().ToArray();
+
                 }
+                int rowLength = array1[0].Length + array2[0].Length;
 
-
-
-                for (int i = 0; i < n - 1; i++)
+                for (int r = 0; r < n; r++)
                 {
-                    if (array1[i].Length + array2[i].Length ==
-                        array1[i + 1].Length + array2[i + 1].Length)
+                    int currentLength = array1[r].Length + array2[r].Length;
+                    if (currentLength != rowLength)
                     {
-                        count = array1[0].Length + array2[0].Length;
-                        a = true;
+                        isMatch = false;
                     }
 
-                    else
-                    {
-                        for (int y = 0; y < n; y++)
-                        {
-                            count += array1[y].Length + array2[y].Length;
-                        }
-                        Console.WriteLine("The total number of cells is: " + count);
-                        break;
-                    }
-                    
+                    count += currentLength;
                 }
 
-                if (a == true)
+
+                if (isMatch == true)
                 {
                     int[] result = new int[count];
+
                     for (int i = 0; i < n; i++)
                     {
                         result = array1[i].Concat(array2[i]).ToArray();
+
                         Console.WriteLine($"[{string.Join(", ", result)}]");
+
                     }
                 }
-        }
-    }
+                else
+                {
+                    Console.WriteLine($"The total number of cells is: {count}");
+                }
+         }
+     }
 }
+
