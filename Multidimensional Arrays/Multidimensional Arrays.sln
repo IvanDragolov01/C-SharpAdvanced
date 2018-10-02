@@ -21,19 +21,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.Matrix of Palindromes", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.Diagonal Difference", "02.Diagonal Difference\02.Diagonal Difference.csproj", "{82477CF1-8C5E-4721-86BC-A1E9920BE0D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.2x2 Squares in Matrix", "03.Problem 3. 2x2 Squares in Matrix\03.2x2 Squares in Matrix.csproj", "{311563C5-5969-433C-9787-2E0C232497B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.2x2 Squares in Matrix", "03.Problem 3. 2x2 Squares in Matrix\03.2x2 Squares in Matrix.csproj", "{311563C5-5969-433C-9787-2E0C232497B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Maximal Sum", "04.Maximal Sum\04.Maximal Sum.csproj", "{13EDE9DC-CD72-4C2B-9E46-5909EA0BE3A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.Maximal Sum", "04.Maximal Sum\04.Maximal Sum.csproj", "{13EDE9DC-CD72-4C2B-9E46-5909EA0BE3A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Rubiks Matrix", "05. Rubiks Matrix\05. Rubiks Matrix.csproj", "{65F7379A-024F-4E16-8D2E-C67B28863AED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Rubiks Matrix", "05. Rubiks Matrix\05. Rubiks Matrix.csproj", "{65F7379A-024F-4E16-8D2E-C67B28863AED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.Target Practice", "06.Target Practice\06.Target Practice.csproj", "{7F15D6AC-83D6-46F5-98A0-F06007443B8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.Target Practice", "06.Target Practice\06.Target Practice.csproj", "{7F15D6AC-83D6-46F5-98A0-F06007443B8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Radioactive Bunnies", "08. Radioactive Bunnies\08. Radioactive Bunnies.csproj", "{D153835A-6B4A-4993-8EB9-42351937FF43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08. Radioactive Bunnies", "08. Radioactive Bunnies\08. Radioactive Bunnies.csproj", "{D153835A-6B4A-4993-8EB9-42351937FF43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.LegoBlocks", "07.LegoBlocks\07.LegoBlocks.csproj", "{1231D43C-136D-4944-9CD7-3C66F285AA99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.LegoBlocks", "07.LegoBlocks\07.LegoBlocks.csproj", "{1231D43C-136D-4944-9CD7-3C66F285AA99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.The Heigan Dance", "10.The Heigan Dance\10.The Heigan Dance.csproj", "{87B284A2-A3A7-4763-8F43-655E9814C03E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10.The Heigan Dance", "10.The Heigan Dance\10.The Heigan Dance.csproj", "{87B284A2-A3A7-4763-8F43-655E9814C03E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. Parking System", "11. Parking System\11. Parking System.csproj", "{708ABB9C-6D04-407B-BD8D-BB40E74631F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +99,10 @@ Global
 		{87B284A2-A3A7-4763-8F43-655E9814C03E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87B284A2-A3A7-4763-8F43-655E9814C03E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87B284A2-A3A7-4763-8F43-655E9814C03E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{708ABB9C-6D04-407B-BD8D-BB40E74631F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{708ABB9C-6D04-407B-BD8D-BB40E74631F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{708ABB9C-6D04-407B-BD8D-BB40E74631F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{708ABB9C-6D04-407B-BD8D-BB40E74631F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -116,6 +122,7 @@ Global
 		{D153835A-6B4A-4993-8EB9-42351937FF43} = {F1FFC023-1BE9-4D0B-B1FB-B359D09B8A66}
 		{1231D43C-136D-4944-9CD7-3C66F285AA99} = {F1FFC023-1BE9-4D0B-B1FB-B359D09B8A66}
 		{87B284A2-A3A7-4763-8F43-655E9814C03E} = {F1FFC023-1BE9-4D0B-B1FB-B359D09B8A66}
+		{708ABB9C-6D04-407B-BD8D-BB40E74631F6} = {F1FFC023-1BE9-4D0B-B1FB-B359D09B8A66}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4AB0B28F-7E95-4A45-BDCE-A27502DA6748}
