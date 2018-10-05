@@ -7,15 +7,21 @@ namespace Streams_Exercise
     {
         static void Main(string[] args)
         {
-            using (var stream = new StreamReader(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\Streams-Exercise\Ex1.cs"))
+            using (var stream = new StreamReader(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\Streams-Exercise\text.txt"))
             {
-                var lineNumber = 1;
+                var lineNumber = 2;
                  
                 string line;
                 while ((line = stream.ReadLine()) != null)
-                {
-                    Console.WriteLine($"Line {lineNumber}: " + line);
-                    lineNumber++;
+                {  
+
+                    if(line.Length % 2  != 0)
+                    {
+
+                        Console.WriteLine($"Line {lineNumber}: " + line);
+                        break;
+                    }
+                    
                 }
             }
         }
