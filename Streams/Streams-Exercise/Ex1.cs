@@ -7,7 +7,7 @@ namespace Streams_Exercise
     {
         static void Main(string[] args)
         {
-            using (var stream = new StreamReader("Ex1.csproj"))
+            using (var stream = new StreamReader(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\Streams-Exercise\Ex1.cs"))
             {
                 var lineNumber = 1;
                  
