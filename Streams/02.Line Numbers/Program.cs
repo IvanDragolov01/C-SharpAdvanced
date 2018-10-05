@@ -19,8 +19,11 @@ namespace _02.Line_Numbers
                         lineNumber++;
                     }
                 }
+
+
             }
         }
+
     }
-}
+}   
 
