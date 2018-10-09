@@ -8,6 +8,7 @@ namespace _05.Slicing_File
 	class Program
 	{
 		private const int bufferSize = 4096;
+
 		static void Main(string[] args)
 		{
 
@@ -24,7 +25,7 @@ namespace _05.Slicing_File
 				"Part-1.mp4",
 				"Part-2.mp4",
 				"Part-3.mp4",
-				"Part-4.mp4",
+				"Part-4.mp4"
 			};
 			Assemble(files,destination);
 		}
@@ -57,6 +58,7 @@ namespace _05.Slicing_File
 							{
 								break;
 							}
+							
 						}
 					}
 				}
@@ -71,10 +73,10 @@ namespace _05.Slicing_File
 			{
 				destinationDirectory = @"D:\CSharpAdvance\C-SharpAdvanced\Streams\05.Slicing File\";
 			}
-			/*
-			 * if (!destinationDirectory.EndsWith("\"))
+			
+			 /* if (!destinationDirectory.EndsWith("/"))
 			{
-				destinationDirectory += 
+				destinationDirectory += "/";
 			}
 			*/
 			string assembledFile = $"{destinationDirectory}Assembled.{extension}";
