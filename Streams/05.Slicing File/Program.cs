@@ -82,6 +82,7 @@ namespace _05.Slicing_File
 			using (FileStream writer = new FileStream(assembledFile, FileMode.Create))
 			{
 				byte[] buffer = new byte[bufferSize];
+
 				foreach (var file in files)
 				{
 					using (FileStream reader = new FileStream(file, FileMode.Open))
