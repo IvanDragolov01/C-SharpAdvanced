@@ -30,7 +30,7 @@ namespace _05.Slicing_File
 
 					if (destinationDirectory == string.Empty)
 					{
-						destinationDirectory = "./";
+						destinationDirectory = @"D:\CSharpAdvance\C-SharpAdvanced\Streams\05.Slicing File\";
 					}
 					string currentPart = destinationDirectory + $"Part-{i}.{extension}";
 					using (FileStream writer = new FileStream(currentPart, FileMode.Create))
