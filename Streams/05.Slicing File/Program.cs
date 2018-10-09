@@ -25,7 +25,7 @@ namespace _05.Slicing_File
 				"Part-1.mp4",
 				"Part-2.mp4",
 				"Part-3.mp4",
-				"Part-4.mp4"
+				"Part-4.mp4",
 			};
 			Assemble(files,destination);
 		}
@@ -47,6 +47,7 @@ namespace _05.Slicing_File
 						destinationDirectory = @"D:\CSharpAdvance\C-SharpAdvanced\Streams\05.Slicing File\";
 					}
 					string currentPart = destinationDirectory + $"Part-{i}.{extension}";
+
 					using (FileStream writer = new FileStream(currentPart, FileMode.Create))
 					{
 						byte[] buffer = new byte[bufferSize];
@@ -58,7 +59,6 @@ namespace _05.Slicing_File
 							{
 								break;
 							}
-							
 						}
 					}
 				}
