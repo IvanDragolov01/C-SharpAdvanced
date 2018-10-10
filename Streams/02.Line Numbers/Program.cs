@@ -13,17 +13,15 @@ namespace _02.Line_Numbers
                 {
                     int lineNumber = 1;
                     string line;
+
                     while ((line = readStream.ReadLine()) != null)
                     {
                         writeStream.WriteLine($"Line {lineNumber}: " + line);
                         lineNumber++;
                     }
                 }
-
-
             }
         }
-
     }
 }   
 

@@ -10,7 +10,6 @@ namespace _08._Radioactive_Bunnies
         static int rows;
         static int columns;
 
-
         static void Main(string[] args)
         {
             int[] dimensions = Console.ReadLine()
@@ -19,7 +18,6 @@ namespace _08._Radioactive_Bunnies
                 ToArray();
 
             board = ReadAndFillMatrix(dimensions);
-
             char[] movements = Console.ReadLine().ToCharArray();
 
             foreach (char move in movements)
@@ -40,11 +38,9 @@ namespace _08._Radioactive_Bunnies
             }
         }
 
-
         private static void Die()
         {
             PrintBoard();
-
             Console.WriteLine($"dead: {playerRow} {playerCol}");
             Environment.Exit(0);
         }
@@ -52,7 +48,6 @@ namespace _08._Radioactive_Bunnies
         private static void Win(int[] previouslocation)
         {
             PrintBoard();
-
             int row = previouslocation[0];
             int col = previouslocation[1];
 
@@ -68,6 +63,7 @@ namespace _08._Radioactive_Bunnies
             {
                 return true;
             }
+
             return false;
         }
 
@@ -79,6 +75,7 @@ namespace _08._Radioactive_Bunnies
                 {
                     Console.Write(board[row, col]);
                 }
+
                 Console.WriteLine();
             }
         }
@@ -159,7 +156,6 @@ namespace _08._Radioactive_Bunnies
             board[oldRow,oldCol] = '.';
 
             return previousLocation;
-
         }
 
         private static char[,] ReadAndFillMatrix(int[] dimensions)
@@ -168,7 +164,6 @@ namespace _08._Radioactive_Bunnies
               columns = dimensions[1];
 
             char[,] matrix = new char[rows, columns];
-
 
             for (int row = 0; row < rows; row++)
             {
@@ -185,7 +180,6 @@ namespace _08._Radioactive_Bunnies
             }
 
             return matrix;
-
         }
     }
 }

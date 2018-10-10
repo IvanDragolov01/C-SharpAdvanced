@@ -10,8 +10,8 @@ namespace Streams_Exercise
             using (var stream = new StreamReader(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\Streams-Exercise\text.txt"))
             {
                 var lineNumber = 1;
-                 
                 string line;
+
                 while ((line = stream.ReadLine()) != null)
                 {
                     if (lineNumber % 2  == 0)
@@ -20,6 +20,7 @@ namespace Streams_Exercise
                         Console.WriteLine(line);
                         
                     }
+
                     lineNumber++;
                 }
             }
@@ -41,6 +42,7 @@ namespace Streams_Exercise
                 var lineNumber = 0;
 
                 string line;
+
                 while ((line = stream.ReadLine()) != null)
                 {
 
@@ -51,8 +53,8 @@ namespace Streams_Exercise
                         break;
 
                     }
-                    lineNumber++;
 
+                    lineNumber++;
                 }
             }
         }
@@ -72,18 +74,15 @@ namespace Streams_Exercise
             using (var stream = new StreamReader(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\Streams-Exercise\text.txt"))
             {
                 var lineNumber = 0;
-
                 string line;
+
                 while ((line = stream.ReadLine()) != null)
                 {
                     lineNumber++;
                     if (lineNumber % 2 == 0)
                     {
-
                         Console.WriteLine(line);
-
                     }
-
                 }
             }
         }

@@ -24,6 +24,7 @@ namespace _03.Word_Count
 							string c1 = readStreamword2.ReadLine();
 							int sum1 = 0, sum2 = 0, sum3 = 0;
 							string line;
+
 							while ((line = readStreamtext.ReadLine()) != null)
 							{
 								line = line.ToLower();
@@ -31,32 +32,22 @@ namespace _03.Word_Count
 
 								for (int i = 0	; i < input.Length; i++)
 								{
-									if (a == input[i])
+									if (a == input[i] || a1 == input[i])
 									{
 										sum1++;
 									}
-									if (a1 == input[i])
-									{
-										sum1++;
-									}
-									if (b == input[i])
+									
+									if (b == input[i] || b1 == input[i])
 									{
 										sum2++;
 									}
-									if (b1 == input[i])
-									{
-										sum2++;
-									}
-									if (c == input[i])
-									{
-										sum3++;
-									}
-									if (c1 == input[i])
+									if (c == input[i] || c1 == input[i])
 									{
 										sum3++;
 									}
 								}
 							}
+
 							Console.WriteLine(sum1);
 							Console.WriteLine(sum2);
 							Console.WriteLine(sum3);

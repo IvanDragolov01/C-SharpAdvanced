@@ -4,42 +4,41 @@ using System.Linq;
 
 namespace _10.Poisonous_Plants
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int n = int.Parse(Console.ReadLine());
-            List<int> indexes = new List<int>();
-            List<int> plants = Console.ReadLine().Split().Select(int.Parse).ToList();
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int n = int.Parse(Console.ReadLine());
+			List<int> indexes = new List<int>();
+			List<int> plants = Console.ReadLine().Split().Select(int.Parse).ToList();
+			int days = 0;
 
-            int days = 0;
+			while (true)
+			{
+				for (int i = 0; i < plants.Count - 1; i++)
+				{
+					if (plants[i] < plants[i + 1])
+					{
+						indexes.Add(i + 1);
+					}
+				}
 
-            while (true)
-            {
+				if (indexes.Count == 0)
+				{
+					break;
+				}
 
+				int counter = 0;
+				for (int i = 0; i < indexes.Count; i++)
+				{
+					plants.RemoveAt(indexes[i] - counter);
+					counter++;
+				}
 
-                for (int i = 0; i < plants.Count - 1; i++)
-                {
-                    if (plants[i] < plants[i + 1])
-                    {
-                        indexes.Add(i + 1);
-                    }
-                }
-                if (indexes.Count == 0)
-                {
-                    break;
-                }
-
-                int counter = 0;
-                for (int i = 0; i < indexes.Count; i++)
-                {
-                    plants.RemoveAt(indexes[i] - counter);
-                    counter++;
-                }
-                days++;
-                indexes.Clear();
-            }
-            Console.WriteLine(days);
-        }
-    }
+				days++;
+				indexes.Clear();
+			}
+			Console.WriteLine(days);
+		}
+	}
 }

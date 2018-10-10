@@ -3,36 +3,36 @@ using System.Linq;
 
 namespace _02.Diagonal_Difference
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int n = int.Parse(Console.ReadLine());
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int n = int.Parse(Console.ReadLine());
 
-            long[][] matrix = new long[n][];
+			long[][] matrix = new long[n][];
 
-            for (int i = 0; i < n; i++)
-            {
-                matrix[i] = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(long.Parse).ToArray();
-            }
+			for (int i = 0; i < n; i++)
+			{
+				matrix[i] = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(long.Parse).ToArray();
+			}
 
-            //Primary diagonal:
-            long primarySum = 0;
+			//Primary diagonal:
+			long primarySum = 0;
 
-            for (int row = 0; row < n; row++)
-            {
-                primarySum += matrix[row][row];
-            }
+			for (int row = 0; row < n; row++)
+			{
+				primarySum += matrix[row][row];
+			}
 
-            //Secondary diagonal:
-            long secondarySum = 0;
+			//Secondary diagonal:
+			long secondarySum = 0;
 
-            for (int row = 0, col = n - 1; row < n; row++, col--)
-            {
-                secondarySum += matrix[row][col];
-            }
+			for (int row = 0, col = n - 1; row < n; row++, col--)
+			{
+				secondarySum += matrix[row][col];
+			}
 
-            Console.WriteLine(Math.Abs(primarySum - secondarySum));
-        }
-    }
+			Console.WriteLine(Math.Abs(primarySum - secondarySum));
+		}
+	}
 }

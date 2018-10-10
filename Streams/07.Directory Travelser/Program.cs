@@ -7,7 +7,6 @@ namespace _07.Directory_Travelser
 {
 	class Program
 	{
-
 		static void Main(string[] args)
 		{
 			string path = Console.ReadLine();
@@ -24,11 +23,11 @@ namespace _07.Directory_Travelser
 				if (!filesDictionary.ContainsKey(extension))
 				{
 					filesDictionary[extension] = new List<FileInfo>();
-
 				}
 
 				filesDictionary[extension].Add(fileInfo);
 			}
+
 			filesDictionary = filesDictionary
 				.OrderByDescending(x => x.Value.Count)
 				.ThenBy(x => x.Key)
