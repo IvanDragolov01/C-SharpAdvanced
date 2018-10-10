@@ -12,9 +12,10 @@ namespace _05.Slicing_File
 		static void Main(string[] args)
 		{
 			string sourceFile = @"D:\CSharpAdvance\C-SharpAdvanced\Streams\05.Slicing File\sliceMe.mp4";
-			string destination = "";
+			string destination = @"D:\CSharpAdvance\C-SharpAdvanced\Streams\05.Slicing File\";
 			int parts = 5;
 			Slice(sourceFile, destination, parts);
+
 			var files = new List<string>
 			{
 				"Part-0.mp4",
@@ -33,9 +34,11 @@ namespace _05.Slicing_File
 			{
 				string extension = sourceFile.Substring(sourceFile.LastIndexOf('.') + 1);
 				long pieceSize = (long)Math.Ceiling((double)reader.Length / parts);
-				long currentPieceSize = 0;
+
 				for (int i = 0; i < parts; i++)
 				{
+					long currentPieceSize = 0;
+
 					if (destinationDirectory == string.Empty)
 					{
 						destinationDirectory = @"D:\CSharpAdvance\C-SharpAdvanced\Streams\05.Slicing File\";
@@ -62,17 +65,19 @@ namespace _05.Slicing_File
 
 		static void Assemble(List<string> files, string destinationDirectory)
 		{
-			string extension = files.First().Substring(files[0].LastIndexOf('.') + 1);
+			string extension = files[0].Substring(files[0].LastIndexOf('.') + 1);
+
 			if (destinationDirectory == string.Empty)
 			{
-				destinationDirectory = @"D:\CSharpAdvance\C-SharpAdvanced\Streams\05.Slicing File\";
+				destinationDirectory = "./";
 			}
 
-			/* if (!destinationDirectory.EndsWith("/"))
-		   {
-			   destinationDirectory += "/";
-		   }
-		   */
+			
+			if (!destinationDirectory.EndsWith("/"))
+			{
+				destinationDirectory += "/";
+			}
+			
 			string assembledFile = $"{destinationDirectory}Assembled.{extension}";
 
 			using (FileStream writer = new FileStream(assembledFile, FileMode.Create))
