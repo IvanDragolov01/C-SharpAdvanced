@@ -69,15 +69,14 @@ namespace _05.Slicing_File
 
 			if (destinationDirectory == string.Empty)
 			{
-				destinationDirectory = "./";
+				destinationDirectory = @"D:\CSharpAdvance\C-SharpAdvanced\Streams\05.Slicing File\";
 			}
 
-			
 			if (!destinationDirectory.EndsWith("/"))
 			{
 				destinationDirectory += "/";
 			}
-			
+
 			string assembledFile = $"{destinationDirectory}Assembled.{extension}";
 
 			using (FileStream writer = new FileStream(assembledFile, FileMode.Create))
@@ -88,7 +87,7 @@ namespace _05.Slicing_File
 				{
 					using (FileStream reader = new FileStream(file, FileMode.Open))
 					{
-						while (reader.Read(buffer, 0, bufferSize) == bufferSize)
+						while (reader.Read(buffer, 0, bufferSize) == buffer)
 						{
 							writer.Write(buffer, 0, bufferSize);
 						}
