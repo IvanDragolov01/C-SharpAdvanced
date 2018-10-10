@@ -13,7 +13,7 @@ namespace _05.Slicing_File
 		{
 
 			string sourceFile = @"D:\CSharpAdvance\C-SharpAdvanced\Streams\05.Slicing File\sliceMe.mp4";
-			string destination = "";
+			string destination = @"D:\CSharpAdvance\C-SharpAdvanced\Streams\05.Slicing File\";
 			int parts = 5;
 
 			

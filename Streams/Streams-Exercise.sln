@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.Line Numbers", "02.Line 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.Copy Binary File", "04.Copy Binary File\04.Copy Binary File.csproj", "{79FB8684-1B56-4D63-8101-943A2B72BDB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Slicing File", "05.Slicing File\05.Slicing File.csproj", "{5021D983-79F5-47BE-A66D-77092B79242D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.Slicing File", "05.Slicing File\05.Slicing File.csproj", "{5021D983-79F5-47BE-A66D-77092B79242D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.Zipping Scliced Files", "06.Zipping Scliced Files\06.Zipping Scliced Files.csproj", "{17D1FF77-7EAE-4AF6-8B18-D7EFF41D916E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.Directory Travelser", "07.Directory Travelser\07.Directory Travelser.csproj", "{B7F36794-15EC-42B4-9CCF-4C441E1CD209}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{5021D983-79F5-47BE-A66D-77092B79242D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5021D983-79F5-47BE-A66D-77092B79242D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5021D983-79F5-47BE-A66D-77092B79242D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{17D1FF77-7EAE-4AF6-8B18-D7EFF41D916E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{17D1FF77-7EAE-4AF6-8B18-D7EFF41D916E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{17D1FF77-7EAE-4AF6-8B18-D7EFF41D916E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{17D1FF77-7EAE-4AF6-8B18-D7EFF41D916E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7F36794-15EC-42B4-9CCF-4C441E1CD209}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7F36794-15EC-42B4-9CCF-4C441E1CD209}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7F36794-15EC-42B4-9CCF-4C441E1CD209}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7F36794-15EC-42B4-9CCF-4C441E1CD209}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
