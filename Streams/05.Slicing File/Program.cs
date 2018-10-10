@@ -87,7 +87,7 @@ namespace _05.Slicing_File
 				{
 					using (FileStream reader = new FileStream(file, FileMode.Open))
 					{
-						while (reader.Read(buffer, 0, bufferSize) == buffer)
+						while (reader.Read(buffer, 0, bufferSize) == bufferSize)
 						{
 							writer.Write(buffer, 0, bufferSize);
 						}
