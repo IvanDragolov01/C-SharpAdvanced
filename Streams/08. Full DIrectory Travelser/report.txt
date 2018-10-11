@@ -1,0 +1,32 @@
+.cs
+--TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs - 0kb
+--TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs - 0kb
+--TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs - 0kb
+--08. Full DIrectory Travelser.AssemblyInfo.cs - 1.032kb
+--Program.cs - 1.36kb
+.cache
+--08. Full DIrectory Travelser.AssemblyInfoInputs.cache - 0.041kb
+--08. Full DIrectory Travelser.csproj.CoreCompileInputs.cache - 0.041kb
+--08. Full DIrectory Travelser.csproj.nuget.cache - 0.146kb
+--08. Full DIrectory Travelser.assets.cache - 20.212kb
+.json
+--08. Full DIrectory Travelser.runtimeconfig.json - 0.15kb
+--08. Full DIrectory Travelser.runtimeconfig.dev.json - 0.246kb
+--08. Full DIrectory Travelser.deps.json - 0.504kb
+--project.assets.json - 38.704kb
+.txt
+--report.txt - 0kb
+--newfile.txt - 0.141kb
+--08. Full DIrectory Travelser.csproj.FileListAbsolute.txt - 1.348kb
+.dll
+--08. Full DIrectory Travelser.dll - 8kb
+--08. Full DIrectory Travelser.dll - 8kb
+.pdb
+--08. Full DIrectory Travelser.pdb - 1.227kb
+--08. Full DIrectory Travelser.pdb - 1.227kb
+.csproj
+--08. Full DIrectory Travelser.csproj - 0.238kb
+.props
+--08. Full DIrectory Travelser.csproj.nuget.g.props - 1.572kb
+.targets
+--08. Full DIrectory Travelser.csproj.nuget.g.targets - 0.958kb
