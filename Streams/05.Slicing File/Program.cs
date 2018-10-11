@@ -11,85 +11,58 @@ namespace _05.Slicing_File
 
 		static void Main(string[] args)
 		{
-			string sourceFile = @"D:\CSharpAdvance\C-SharpAdvanced\Streams\05.Slicing File\sliceMe.mp4";
-			string destination = @"D:\CSharpAdvance\C-SharpAdvanced\Streams\05.Slicing File\";
 			int parts = 5;
-			Slice(sourceFile, destination, parts);
+			string sourceFilePath = @"D:\CSharpAdvance\C-SharpAdvanced\Streams\05.Slicing File\sliceMe.mp4";
+			string destinationDirectory = @"D:\CSharpAdvance\C-SharpAdvanced\Streams\05.Slicing File\";
+			Slice(sourceFilePath, destinationDirectory, parts);
 
-			var files = new List<string>
+			List<string> files = new List<string>();
+
+			for (int i = 0; i < parts; i++)
 			{
-				"Part-0.mp4",
-				"Part-1.mp4",
-				"Part-2.mp4",
-				"Part-3.mp4",
-				"Part-4.mp4",
-			};
+				files.Add($"{destinationDirectory}/Part-{i}.mp4");
+			}
 
-			Assemble(files, destination);
+			string assembledDirectory = @"D:\CSharpAdvance\C-SharpAdvanced\Streams\05.Slicing File\";
+			Assemble(files, assembledDirectory);
 		}
 
-		static void Slice(string sourceFile, string destinationDirectory, int parts)
+		private static void Assemble(List<string> files, string destinationDirectory)
 		{
-			using (FileStream reader = new FileStream(sourceFile, FileMode.Open))
+			using (FileStream destination = new FileStream($"{destinationDirectory}/Assembled.mp4", FileMode.Create))
 			{
-				string extension = sourceFile.Substring(sourceFile.LastIndexOf('.') + 1);
-				long pieceSize = (long)Math.Ceiling((double)reader.Length / parts);
-
-				for (int i = 0; i < parts; i++)
+				foreach (var file in files)
 				{
-					long currentPieceSize = 0;
-
-					if (destinationDirectory == string.Empty)
+					using (FileStream partStream = new FileStream(file, FileMode.Open))
 					{
-						destinationDirectory = @"D:\CSharpAdvance\C-SharpAdvanced\Streams\05.Slicing File\";
-					}
+						byte[] buffer = new byte[4096];
+						int readBytes;
 
-					string currentPart = destinationDirectory + $"Part-{i}.{extension}";
-					using (FileStream writer = new FileStream(currentPart, FileMode.Create))
-					{
-						byte[] buffer = new byte[bufferSize];
-
-						while (reader.Read(buffer, 0, bufferSize) == bufferSize)
+						while ((readBytes = partStream.Read(buffer, 0, buffer.Length)) != 0)
 						{
-							writer.Write(buffer, 0, bufferSize);
-							currentPieceSize += bufferSize;
-							if (currentPieceSize >= pieceSize)
-							{
-								break;
-							}
+							destination.Write(buffer, 0, readBytes);
 						}
 					}
 				}
 			}
 		}
 
-		static void Assemble(List<string> files, string destinationDirectory)
+		static void Slice(string sourceFile, string destinationDirectory, int parts)
 		{
-			string extension = files[0].Substring(files[0].LastIndexOf('.') + 1);
-
-			if (destinationDirectory == string.Empty)
+			using (FileStream source = new FileStream(sourceFile, FileMode.Open))
 			{
-				destinationDirectory = @"D:\CSharpAdvance\C-SharpAdvanced\Streams\05.Slicing File\";
-			}
+				double partSize = source.Length / parts;
 
-			if (!destinationDirectory.EndsWith("/"))
-			{
-				destinationDirectory += "/";
-			}
-
-			string assembledFile = $"{destinationDirectory}Assembled.{extension}";
-
-			using (FileStream writer = new FileStream(assembledFile, FileMode.Create))
-			{
-				byte[] buffer = new byte[bufferSize];
-
-				foreach (var file in files)
+				for (int i = 0; i < parts; i++)
 				{
-					using (FileStream reader = new FileStream(file, FileMode.Open))
+					using (FileStream destination = new FileStream($"{destinationDirectory}/Part-{i}.mp4", FileMode.Create))
 					{
-						while (reader.Read(buffer, 0, bufferSize) == bufferSize)
+						byte[] buffer = new byte[4096];
+						int readBytes;
+
+						while (destination.Length < partSize && (readBytes = source.Read(buffer, 0, buffer.Length)) != 0)
 						{
-							writer.Write(buffer, 0, bufferSize);
+							destination.Write(buffer, 0, readBytes);
 						}
 					}
 				}
@@ -97,5 +70,4 @@ namespace _05.Slicing_File
 		}
 	}
 }
-
 
