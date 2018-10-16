@@ -6,7 +6,10 @@ namespace _03.Custom_Min_Function
 	{
 		static void Main(string[] args)
 		{
-			int[] ints = Console.ReadLine().Split().Select(int.Parse).ToArray();
+			int[] ints = Console.ReadLine()
+				.Split()
+				.Select(int.Parse)
+				.ToArray();
 
 			Func<int[], int> minFunc = arr =>
 			{
@@ -25,3 +28,6 @@ namespace _03.Custom_Min_Function
 		}
 	}
 }
+
+
+

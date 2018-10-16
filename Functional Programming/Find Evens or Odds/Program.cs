@@ -6,26 +6,30 @@ namespace Find_Evens_or_Odds
 	{
 		static void Main(string[] args)
 		{
-			int[] bounds = Console.ReadLine().Split().Select(int.Parse).ToArray();
-			string evenOrOdd = Console.ReadLine();
+			Predicate<string> isOdd = x => x == "odd";
+			Predicate<string> isEven = x => x == "even";
+			int[] bounds = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+			string input = Console.ReadLine();
 
-			Predicate<int> predicate = null;
-			if (evenOrOdd == "even")
+			if (isOdd.Invoke(input))
 			{
-				predicate = i => i % 2 == 0;
-			}
-			else if (evenOrOdd == "odd")
-			{
-				predicate = i => i % 2 != 0;
-			}
-
-			for (int i = bounds[0]; i <= bounds[1]; i++)
-			{
-				if (predicate(i))
+				for (int i = bounds[0]; i <= bounds[1]; i++)
 				{
-					Console.Write(i + " ");
+					if (i % 2 != 0)
+						Console.Write(i + " ");
 				}
 			}
+
+			if (isEven.Invoke(input))
+			{
+				for (int i = bounds[0]; i <= bounds[1]; i++)
+				{
+					if (i % 2 == 0)
+						Console.Write(i + " ");
+				}
+			}
+
+			Console.WriteLine();
 		}
 	}
 }

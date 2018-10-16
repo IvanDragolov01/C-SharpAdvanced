@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Concatenate_Data
@@ -8,7 +9,7 @@ namespace Concatenate_Data
 		static void Main(string[] args)
 		{
 			Action<string> print = message => Console.WriteLine(message);
-			var name = Console.ReadLine().Split(' ').ToList();
+			List<string> name = Console.ReadLine().Split(' ').ToList();
 
 			foreach (var word in name)
 			{

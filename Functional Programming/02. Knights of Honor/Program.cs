@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 namespace _02._Knights_of_Honor
 {
@@ -7,7 +8,7 @@ namespace _02._Knights_of_Honor
 		static void Main(string[] args)
 		{
 			Action<string> print = message => Console.WriteLine("Sir " + message);
-			var name = Console.ReadLine().Split(' ').ToList();
+			List<string> name = Console.ReadLine().Split(' ').ToList();
 
 			foreach (var word in name)
 			{

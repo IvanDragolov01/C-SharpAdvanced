@@ -1,0 +1,77 @@
+﻿using System;
+using System.Linq;
+namespace _05.Applied_Arithmetics
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int i = 0;
+			Func<int, int> add = x => x + 1;
+			Func<int, int> multiply = x => x * 2;
+			Func<int, int> subtract = x => x - 1;
+			Action<int> print = x => Console.Write(x + " ");
+			int[] input = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
+			string[] commands = { };
+			string command = "";
+			bool a = false;
+
+			while (a != true)
+			{
+				command = Console.ReadLine();
+
+				switch (command)
+				{
+					case "add":
+						{
+							foreach (var number in input)
+							{
+								input[i] = (add(number));
+								i++;
+							}
+							i = 0;
+						}
+						break;
+					case "multiply":
+						{
+							foreach (var number in input)
+							{
+								input[i] = (multiply(number));
+								i++;
+							}
+							i = 0;
+						}
+						break;
+					case "subtract":
+						{
+							foreach (var number in input)
+							{
+								input[i] = (subtract(number));
+								i++;
+							}
+							i = 0;
+						}
+						break;
+					case "print":
+						{
+							foreach (var number in input)
+							{
+								print(number);
+							}
+							i = 0;
+
+						}
+						break;
+					case "end":
+						{
+							a = true;
+						}
+						break;
+
+				}
+
+				Environment.Exit(0);
+			}
+		}
+	}
+}
