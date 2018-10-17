@@ -1,44 +1,43 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 namespace _08.Custom_Comparator
 {
 	class Program
 	{
 		static void Main(string[] args)
 		{
+			Predicate<int> isDivesible1 = x => x % 2 != 0;
+			Predicate<int> isDivesible2 = x => x % 2 == 0;
 
-			int[] max = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
-			int[] max1 = { };
-			int[] max2 = { };
-			int p = 0, p2 = 0;
-			Func<int, int> isDivesible1 = x => x % 2;
-			Func<int, int> isDivesible2 = x => x % 2;
-			for (int i = 0; i < max.Length; i++)
+			List<int> input = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
+			List<int> evenNumbers = new List<int>();
+			List<int> oddNumbers = new List<int>();
+
+			foreach (int number in input)
 			{
-				if (isDivesible1(max[i]) != 0)
+				if (isDivesible1.Invoke(number))
 				{
-					foreach (var number in max)
-					{
-						max1[p] = number;
-						p++;
-					}
+					oddNumbers.Add(number);
+				}
+
+				else if (isDivesible2.Invoke(number))
+				{
+					evenNumbers.Add(number);
 				}
 			}
-			for (int i = 0; i < max.Length; i++)
+
+			oddNumbers.Sort();
+			evenNumbers.Sort();
+
+			foreach (var even in evenNumbers)
 			{
-				if (isDivesible2(max[i]) == 0)
-				{
-					foreach (var number in max)
-					{
-						max2[p2] = number;
-						p++;
-					}
-				}
+				Console.Write(even + " ");
 			}
-			int[] max3 = max1.Concat(max2).ToArray();
-			for (int i = 0; i < max3.Length; i++)
+
+			foreach (var odd in oddNumbers)
 			{
-				Console.WriteLine(max3[i]);
+				Console.Write(odd + " ");
 			}
 		}
 	}
