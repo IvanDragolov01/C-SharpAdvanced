@@ -11,12 +11,10 @@ namespace _05.Applied_Arithmetics
 			Func<int, int> multiply = x => x * 2;
 			Func<int, int> subtract = x => x - 1;
 			Action<int> print = x => Console.Write(x + " ");
-			int[] input = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
-			string[] commands = { };
+			int[] input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 			string command = "";
-			bool a = false;
 
-			while (a != true)
+			while (command != "end")
 			{
 				command = Console.ReadLine();
 
@@ -58,20 +56,12 @@ namespace _05.Applied_Arithmetics
 							{
 								print(number);
 							}
-							i = 0;
-
+							Console.WriteLine();
 						}
 						break;
-					case "end":
-						{
-							a = true;
-						}
-						break;
-
 				}
-
-				Environment.Exit(0);
 			}
+			Environment.Exit(0);
 		}
 	}
 }
