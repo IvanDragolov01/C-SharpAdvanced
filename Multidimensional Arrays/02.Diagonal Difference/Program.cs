@@ -8,14 +8,12 @@ namespace _02.Diagonal_Difference
 		static void Main(string[] args)
 		{
 			int n = int.Parse(Console.ReadLine());
-
 			long[][] matrix = new long[n][];
 
 			for (int i = 0; i < n; i++)
 			{
 				matrix[i] = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(long.Parse).ToArray();
 			}
-
 			//Primary diagonal:
 			long primarySum = 0;
 

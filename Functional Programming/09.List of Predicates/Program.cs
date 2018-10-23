@@ -22,6 +22,7 @@ namespace _09.List_of_Predicates
 						times++;
 					}
 				}
+
 				if (times == input.Length) Console.Write(i + " ");
 			}
 		}

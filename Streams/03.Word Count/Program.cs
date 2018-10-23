@@ -30,13 +30,13 @@ namespace _03.Word_Count
 								line = line.ToLower();
 								string[] input = line.Split(" ");
 
-								for (int i = 0	; i < input.Length; i++)
+								for (int i = 0; i < input.Length; i++)
 								{
 									if (a == input[i] || a1 == input[i])
 									{
 										sum1++;
 									}
-									
+
 									if (b == input[i] || b1 == input[i])
 									{
 										sum2++;
@@ -86,7 +86,7 @@ namespace _03.Word_Count
 								writeStream.WriteLine(b + "  -" + sum2);
 								writeStream.WriteLine(c + " - " + sum3);
 							}
-						} 
+						}
 					}
 				}
 			}

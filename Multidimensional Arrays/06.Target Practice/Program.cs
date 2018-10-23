@@ -13,12 +13,15 @@ namespace _06.Target_Practice
 			int rows = dimensions[0];
 			int columns = dimensions[1];
 			string snake = Console.ReadLine();
-			int[] shot = Console.ReadLine().Split(new char[] { ' ' },
-				StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+			int[] shot = Console.ReadLine()
+				.Split(new char[] { ' ' },
+				StringSplitOptions.RemoveEmptyEntries)
+				.Select(int.Parse)
+				.ToArray();
+
 			char[,] stairs = FillMatrix(snake, rows, columns);
 			stairs = FireShot(shot, stairs);
 			stairs = Gravity(stairs);
-
 			PrintMatrix(stairs);
 		}
 
@@ -74,8 +77,8 @@ namespace _06.Target_Practice
 				{
 					int a = row - r;
 					int b = column - c;
-
 					double distance = Math.Sqrt(a * a + b * b);
+
 					if (distance <= radius)
 					{
 						stairs[r, c] = ' ';
@@ -113,6 +116,5 @@ namespace _06.Target_Practice
 			}
 			return matrix;
 		}
-
 	}
 }

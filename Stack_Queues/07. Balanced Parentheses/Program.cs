@@ -9,6 +9,7 @@ namespace _07._Balanced_Parentheses
 		static void Main(string[] args)
 		{
 			char[] input = Console.ReadLine().ToCharArray();
+
 			if (input.Length % 2 != 0)
 			{
 				Console.WriteLine("NO");

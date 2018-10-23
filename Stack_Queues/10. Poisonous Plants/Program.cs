@@ -38,6 +38,7 @@ namespace _10.Poisonous_Plants
 				days++;
 				indexes.Clear();
 			}
+
 			Console.WriteLine(days);
 		}
 	}

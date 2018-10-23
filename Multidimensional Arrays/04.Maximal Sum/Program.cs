@@ -6,7 +6,10 @@ namespace _04.Maximal_Sum
 	{
 		static void Main(string[] args)
 		{
-			int[] rowsAndColumns = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
+			int[] rowsAndColumns = Console.ReadLine()
+				.Split(" ")
+				.Select(int.Parse)
+				.ToArray();
 			int[,] matrix = new int[rowsAndColumns[0], rowsAndColumns[1]];
 			int maxsum = 0, currentsum = 0;
 			int startCol = 0, startRow = 0;
@@ -17,6 +20,7 @@ namespace _04.Maximal_Sum
 					.Split(new[] { ' ' }
 						, StringSplitOptions.RemoveEmptyEntries)
 					.Select(int.Parse).ToArray();
+
 				for (int cols = 0; cols < matrix.GetLength(1); cols++)
 				{
 					matrix[row, cols] = rowValues[cols];
@@ -48,6 +52,7 @@ namespace _04.Maximal_Sum
 				{
 					Console.Write(matrix[row, col] + " ");
 				}
+
 				Console.WriteLine();
 			}
 		}

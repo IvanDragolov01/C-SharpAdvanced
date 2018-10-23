@@ -68,6 +68,7 @@ namespace TheHeiganDance
 			int[][] damageArea = new int[2][];
 			damageArea[0] = new int[3];
 			damageArea[1] = new int[3];
+
 			for (int i = 0; i < 3; i++)
 			{
 
@@ -89,6 +90,7 @@ namespace TheHeiganDance
 			int rowBelow = playerRow + 1;
 			int leftCol = playerCol - 1;
 			int rightCol = playerCol + 1;
+
 			if (playerRow - 1 >= min && !damageArea[0].Contains(rowAbove))
 			{
 				playerRow = rowAbove;

@@ -65,9 +65,8 @@ namespace _03.Number_Wars
 							}
 						}
 						else
-						{
 							gameOver = true;
-						}
+							break;
 					}
 				}
 			}
@@ -75,17 +74,11 @@ namespace _03.Number_Wars
 			var result = "";
 
 			if (firstAllCards.Count == secondAllCards.Count)
-			{
 				result = "Draw";
-			}
 			else if (firstAllCards.Count > secondAllCards.Count)
-			{
 				result = "First player wins";
-			}
 			else
-			{
 				result = "Second player wins";
-			}
 
 			Console.WriteLine($"{result} after {turnsCounter} turns");
 		}

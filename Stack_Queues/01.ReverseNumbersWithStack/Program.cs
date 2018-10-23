@@ -14,7 +14,6 @@ namespace _01.ReverseNumbersWithStack
 			  .ToArray();
 
 			var stack = new Stack<int>(input);
-
 			Console.WriteLine(string.Join(" ", stack));
 		}
 	}

@@ -10,10 +10,10 @@ namespace _11._Parking_System
 
 		static void Main(string[] args)
 		{
-			int[] dimensions = Console.ReadLine().
-				Split().
-				Select(int.Parse).
-				ToArray();
+			int[] dimensions = Console.ReadLine()
+				.Split()
+				.Select(int.Parse)
+				.ToArray();
 
 			rows = dimensions[0];
 			cols = dimensions[1];
@@ -37,10 +37,8 @@ namespace _11._Parking_System
 				if (targetCol > 0)
 				{
 					MarkSpotAsTaken(targetRow, targetCol);
-
 					int distancePassed = Math.Abs(entryRow - targetRow) + targetCol + 1;
 					Console.WriteLine(distancePassed);
-
 				}
 				else
 				{
@@ -68,6 +66,7 @@ namespace _11._Parking_System
 				if (!parking[targetRow][currentcol])
 				{
 					int distance = Math.Abs(currentcol - targetCol);
+
 					if (distance < bestDistance)
 					{
 						parkingCol = currentcol;

@@ -18,8 +18,8 @@ namespace _07.LegoBlocks
 			{
 				array1[i] = Console.ReadLine()
 					.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-
-					.Select(int.Parse).ToArray();
+					.Select(int.Parse)
+					.ToArray();
 
 			}
 
@@ -30,7 +30,9 @@ namespace _07.LegoBlocks
 
 					.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
 
-					.Select(int.Parse).Reverse().ToArray();
+					.Select(int.Parse)
+					.Reverse()
+					.ToArray();
 
 			}
 
@@ -39,6 +41,7 @@ namespace _07.LegoBlocks
 			for (int r = 0; r < n; r++)
 			{
 				int currentLength = array1[r].Length + array2[r].Length;
+
 				if (currentLength != rowLength)
 				{
 					isMatch = false;

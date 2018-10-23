@@ -7,7 +7,10 @@ namespace _01.Matrix_of_Palindromes
 	{
 		static void Main(string[] args)
 		{
-			var rowsAndColumns = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+			var rowsAndColumns = Console.ReadLine().Split(' ')
+				.Select(int.Parse)
+				.ToArray();
+
 			char[,] matrix = new char[rowsAndColumns[0], rowsAndColumns[1]];
 			char a = 'a';
 			char b = 'a';
