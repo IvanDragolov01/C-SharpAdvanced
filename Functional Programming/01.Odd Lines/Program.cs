@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Concatenate_Data
+namespace _01.Odd_Lines
 {
 	class Program
 	{
