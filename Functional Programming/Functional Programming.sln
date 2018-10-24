@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12.Inferno III", "12.Infern
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11.Party Reservation Filter Module", "11.Party Reservation Filter Module\11.Party Reservation Filter Module.csproj", "{43DD670D-B292-4942-A046-107D1B49F882}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Action Point", "01.Odd Lines\01.Action Point.csproj", "{C3ED0CF7-65AC-4FFF-A51B-E6FF760C39EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Action Point", "01.Action Point\01.Action Point.csproj", "{C3ED0CF7-65AC-4FFF-A51B-E6FF760C39EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
