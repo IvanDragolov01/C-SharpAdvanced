@@ -39,7 +39,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11. Parking System", "11. P
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09.Crossfire", "09.Crossfire\09.Crossfire.csproj", "{5F00F7BE-EF5E-4994-BAB1-D45404FDB8BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.String Matrix Rotations", "String Matrix Rotations\12.String Matrix Rotations.csproj", "{D1458E61-0369-40D7-89DE-9E0F0CD9DDCF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.String Matrix Rotations", "12.String Matrix Rotations\12.String Matrix Rotations.csproj", "{D1458E61-0369-40D7-89DE-9E0F0CD9DDCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
