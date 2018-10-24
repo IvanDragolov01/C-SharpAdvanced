@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.Odd Lines", "01.Streams-Exercise\01.Odd Lines.csproj", "{7035F684-E1BC-43B5-B127-CD7C055EC03A}".
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.Odd Lines", "01.Odd Lines\01.Odd Lines.csproj", "{7035F684-E1BC-43B5-B127-CD7C055EC03A}".
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.Word Count", "03.Word Count\03.Word Count.csproj", "{521DA971-010E-4CE7-8125-E28C71903C3A}"
 EndProject
