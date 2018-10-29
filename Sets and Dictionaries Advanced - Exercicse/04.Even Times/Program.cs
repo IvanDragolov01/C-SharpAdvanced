@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace _04.Even_Times
 {
@@ -32,8 +33,24 @@ namespace _04.Even_Times
 				{
 					Console.Write(number.Key);
 				}
-
 			}
+
+			//second solution
+			//int n = int.Parse(Console.ReadLine());
+			//Dictionary<int, int> numbers = new Dictionary<int, int>();
+
+			//for (int i = 0; i < n; i++)
+			//{
+			//	var num = int.Parse(Console.ReadLine());
+
+			//	if (!numbers.ContainsKey(num))
+			//	{
+			//		numbers.Add(num, 0);
+			//	}
+			//	numbers[num]++;
+			//}
+
+			//Console.WriteLine(numbers.Where(x => x.Value % 2 == 0).FirstOrDefault().Key);
 		}
 	}
 }

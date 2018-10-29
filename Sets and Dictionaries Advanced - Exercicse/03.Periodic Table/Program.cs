@@ -28,6 +28,23 @@ namespace _03.Periodic_Table
 				var key = item.Key;
 				Console.Write(key + " ");
 			}
+
+			//second solution - Hash Set
+
+			//SortedSet<string> chemicals = new SortedSet<string>();
+			//int n = int.Parse(Console.ReadLine());
+
+			//for (int i = 0; i < n; i++)
+			//{
+			//	string[] input = Console.ReadLine().Split();
+
+			//	foreach (var chemicalName in input)
+			//	{
+			//		chemicals.Add(chemicalName);
+			//	}
+			//}
+
+			//Console.WriteLine(String.Join(" ", chemicals));
 		}
 	}
 }

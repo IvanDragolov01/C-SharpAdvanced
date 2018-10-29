@@ -28,6 +28,8 @@ namespace _05.Count_Symbols
 				var value = symbol.Value;
 				Console.WriteLine(key + ": " + value + " time/s");
 			}
+
+			//second solution
 		}
 	}
 }

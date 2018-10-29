@@ -41,6 +41,34 @@ namespace _02.Sets_of_Elements
 					Console.Write(key + " ");
 				}
 			}
+
+			//second solution - Hash Set
+			//HashSet<int> firstSet = new HashSet<int>();
+			//HashSet<int> secondSet = new HashSet<int>();
+
+			//int[] length = Console.ReadLine().Split().Select(int.Parse).ToArray();
+			//int n = length[0];
+			//int m = length[1];
+
+			//for (int i = 0; i < n; i++)
+			//{
+			//	int currentNumber = int.Parse(Console.ReadLine());
+			//	firstSet.Add(currentNumber);
+			//}
+
+			//for (int i = 0; i < m; i++)
+			//{
+			//	int currentNumber = int.Parse(Console.ReadLine());
+			//	secondSet.Add(currentNumber);
+			//}
+
+			//foreach (var number in firstSet)
+			//{
+			//	if (secondSet.Contains(number))
+			//	{
+			//		Console.Write(number + " ");
+			//	}
+			//}
 		}
 	}
 }
