@@ -6,7 +6,7 @@ namespace _02.Knight_Game
 	{
 		static void Main(string[] args)
 		{
-			var boardSize = int.Parse(Console.ReadLine());
+			int boardSize = int.Parse(Console.ReadLine());
 			char[][] board = new char[boardSize][];
 
 			for (int counter = 0; counter < boardSize; counter++)
@@ -56,23 +56,47 @@ namespace _02.Knight_Game
 
 		static int CalculateAttackedPositions(int row, int column, char[][] board)
 		{
-			var currentAttackPositions = 0;
+			int currentAttackPositions = 0;
 
-			if (IsPositionAttacked(row - 2, column - 1, board)) currentAttackPositions++;
+			if (IsPositionAttacked(row - 2, column - 1, board))
+			{
+				currentAttackPositions++;
+			}
 
-			if (IsPositionAttacked(row - 2, column + 1, board)) currentAttackPositions++;
+			if (IsPositionAttacked(row - 2, column + 1, board))
+			{
+				currentAttackPositions++;
+			}
 
-			if (IsPositionAttacked(row - 1, column - 2, board)) currentAttackPositions++;
+			if (IsPositionAttacked(row - 1, column - 2, board))
+			{
+				currentAttackPositions++;
+			}
 
-			if (IsPositionAttacked(row - 1, column + 2, board)) currentAttackPositions++;
+			if (IsPositionAttacked(row - 1, column + 2, board))
+			{
+				currentAttackPositions++;
+			}
 
-			if (IsPositionAttacked(row + 1, column - 2, board)) currentAttackPositions++;
+			if (IsPositionAttacked(row + 1, column - 2, board))
+			{
+				currentAttackPositions++;
+			}
 
-			if (IsPositionAttacked(row + 1, column + 2, board)) currentAttackPositions++;
+			if (IsPositionAttacked(row + 1, column + 2, board))
+			{
+				currentAttackPositions++;
+			}
 
-			if (IsPositionAttacked(row + 2, column - 1, board)) currentAttackPositions++;
+			if (IsPositionAttacked(row + 2, column - 1, board))
+			{
+				currentAttackPositions++;
+			}
 
-			if (IsPositionAttacked(row + 2, column + 1, board)) currentAttackPositions++;
+			if (IsPositionAttacked(row + 2, column + 1, board))
+			{
+				currentAttackPositions++;
+			}
 
 			return currentAttackPositions;
 		}

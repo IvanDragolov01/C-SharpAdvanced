@@ -14,7 +14,7 @@ namespace _11.Party_Reservation_Filter_Module
 
 			while ((input = Console.ReadLine()) != "Print")
 			{
-				var split = input.Split(';');
+				string[] split = input.Split(';');
 				string funcName = split[0];
 				string filterName = split[1];
 				string argument = split[2];

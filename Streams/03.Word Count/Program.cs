@@ -8,13 +8,17 @@ namespace _03.Word_Count
 	{
 		static void Main(string[] args)
 		{
-			using (var readStreamtext = new StreamReader(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\Streams-Exercise\text.txt"))
+			using (StreamReader readStreamtext = new StreamReader
+				(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\Streams-Exercise\text.txt"))
 			{
-				using (var readStreamword = new StreamReader(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\03.Word Count\words.txt"))
+				using (StreamReader readStreamword = new StreamReader
+					(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\03.Word Count\words.txt"))
 				{
-					using (var writeStream = new StreamWriter(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\03.Word Count\broi.txt"))
+					using (StreamWriter writeStream = new StreamWriter
+						(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\03.Word Count\broi.txt"))
 					{
-						using (var readStreamword2 = new StreamReader(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\03.Word Count\word.txt"))
+						using (var readStreamword2 = new StreamReader
+							(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\03.Word Count\word.txt"))
 						{
 							string a = readStreamword.ReadLine();
 							string b = readStreamword.ReadLine();

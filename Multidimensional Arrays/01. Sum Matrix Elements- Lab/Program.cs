@@ -7,11 +7,20 @@ namespace _01._Sum_Matrix_Elements
 	{
 		static void Main(string[] args)
 		{
-			int[] rowsAndColumns = Console.ReadLine().Split(new string[] { ", " }, StringSplitOptions.None).Select(int.Parse).ToArray();
+			int[] rowsAndColumns = Console.ReadLine()
+				.Split(new string[] { ", " })
+				.Select(int.Parse)
+				.ToArray();
+
 			int[,] matrix = new int[rowsAndColumns[0], rowsAndColumns[1]];
+
 			for (int rows = 0; rows < rowsAndColumns[0]; rows++)
 			{
-				var rowValues = Console.ReadLine().Split(new string[] { ", " }, StringSplitOptions.None).Select(int.Parse).ToArray();
+				int[] rowValues = Console.ReadLine()
+					.Split(new string[] { ", " })
+					.Select(int.Parse)
+					.ToArray();
+
 				for (int columns = 0; columns < rowsAndColumns[1]; columns++)
 				{
 					matrix[rows, columns] = rowValues[columns];

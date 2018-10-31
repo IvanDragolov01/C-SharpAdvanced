@@ -8,7 +8,7 @@ namespace _02.Sets_of_Elements
 	{
 		static void Main(string[] args)
 		{
-			var n = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
+			int[] n = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
 
 			Dictionary<int, int> numbersn = new Dictionary<int, int>();
 			Dictionary<int, int> numbersm = new Dictionary<int, int>();
@@ -35,7 +35,7 @@ namespace _02.Sets_of_Elements
 
 			foreach (var item in numbersn)
 			{
-				var key = item.Key;
+				int key = item.Key;
 
 				if (numbersm.ContainsKey(key))
 				{
@@ -43,7 +43,7 @@ namespace _02.Sets_of_Elements
 				}
 			}
 
-			//second solution - Hash Set
+			//second solution -Hash Set
 			//HashSet<int> firstSet = new HashSet<int>();
 			//HashSet<int> secondSet = new HashSet<int>();
 
@@ -63,7 +63,7 @@ namespace _02.Sets_of_Elements
 			//	secondSet.Add(currentNumber);
 			//}
 
-			//foreach (var number in firstSet)
+			//foreach (int number in firstSet)
 			//{
 			//	if (secondSet.Contains(number))
 			//	{

@@ -23,45 +23,50 @@ namespace _05.Applied_Arithmetics
 				{
 					case "add":
 						{
-							foreach (var number in input)
+							foreach (int number in input)
 							{
 								input[i] = (add(number));
 								i++;
 							}
+
 							i = 0;
 						}
 						break;
 					case "multiply":
 						{
-							foreach (var number in input)
+							foreach (int number in input)
 							{
 								input[i] = (multiply(number));
 								i++;
 							}
+
 							i = 0;
 						}
 						break;
 					case "subtract":
 						{
-							foreach (var number in input)
+							foreach (int number in input)
 							{
 								input[i] = (subtract(number));
 								i++;
 							}
+
 							i = 0;
 						}
 						break;
 					case "print":
 						{
-							foreach (var number in input)
+							foreach (int number in input)
 							{
 								print(number);
 							}
+
 							Console.WriteLine();
 						}
 						break;
 				}
 			}
+
 			Environment.Exit(0);
 		}
 	}

@@ -17,7 +17,7 @@ namespace _04.Copy_Binary_File
 
 					while (true)
 					{
-						var readBytesCount = sourceFile.Read(buffer, 0, buffer.Length);
+						int readBytesCount = sourceFile.Read(buffer, 0, buffer.Length);
 
 						if (readBytesCount == 0)
 							break;

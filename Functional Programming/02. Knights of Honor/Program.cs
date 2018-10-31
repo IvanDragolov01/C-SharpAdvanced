@@ -10,7 +10,7 @@ namespace _02._Knights_of_Honor
 			Action<string> print = message => Console.WriteLine("Sir " + message);
 			List<string> name = Console.ReadLine().Split(' ').ToList();
 
-			foreach (var word in name)
+			foreach (string word in name)
 			{
 				print(word);
 			}

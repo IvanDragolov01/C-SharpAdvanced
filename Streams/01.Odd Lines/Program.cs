@@ -7,9 +7,10 @@ namespace Streams_Exercise
 	{
 		static void Main(string[] args)
 		{
-			using (var stream = new StreamReader(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\Streams-Exercise\text.txt"))
+			using (StreamReader stream = new StreamReader
+				(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\Streams-Exercise\text.txt"))
 			{
-				var lineNumber = 1;
+				int lineNumber = 1;
 				string line;
 
 				while ((line = stream.ReadLine()) != null)

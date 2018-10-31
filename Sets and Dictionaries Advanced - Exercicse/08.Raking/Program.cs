@@ -58,11 +58,11 @@ namespace _08.Raking
 
 			var sortedStrudents = students.OrderBy(x => x.Key).ToDictionary(p => p.Key, y => y.Value);
 
-			foreach (var kvp in sortedStrudents)
+			foreach (KeyValuePair<string, Dictionary<string, int>> kvp in sortedStrudents)
 			{
 				Console.WriteLine(kvp.Key);
 
-				foreach (var contest in kvp.Value.OrderByDescending(x => x.Value))
+				foreach (KeyValuePair<string, int> contest in kvp.Value.OrderByDescending(x => x.Value))
 				{
 					Console.WriteLine($"#  {contest.Key} -> {contest.Value}");
 				}

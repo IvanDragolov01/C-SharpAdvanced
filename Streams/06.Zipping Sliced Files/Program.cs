@@ -29,7 +29,7 @@ namespace _06.Zipping_Sliced_Files
 		{
 			using (FileStream destination = new FileStream($"{destinationDirectory}/assembled.mp4", FileMode.Create))
 			{
-				foreach (var file in files)
+				foreach (string file in files)
 				{
 					using (FileStream partStream = new FileStream(file, FileMode.Open))
 					{

@@ -7,9 +7,11 @@ namespace _02.Line_Numbers
 	{
 		static void Main(string[] args)
 		{
-			using (var readStream = new StreamReader(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\02.Line Numbers\text.txt"))
+			using (StreamReader readStream = new StreamReader
+				(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\02.Line Numbers\text.txt"))
 			{
-				using (var writeStream = new StreamWriter(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\02.Line Numbers\newfile.txt"))
+				using (StreamWriter writeStream = new StreamWriter
+					(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\02.Line Numbers\newfile.txt"))
 				{
 					int lineNumber = 1;
 					string line;

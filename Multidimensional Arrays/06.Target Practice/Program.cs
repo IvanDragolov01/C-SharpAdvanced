@@ -10,15 +10,15 @@ namespace _06.Target_Practice
 		{
 			int[] dimensions = Console.ReadLine()
 				.Split(new char[] { ' ' })
-				.Select(int.Parse).ToArray();
+				.Select(int.Parse)
+				.ToArray();
 
 			int rows = dimensions[0];
 			int columns = dimensions[1];
 			string snake = Console.ReadLine();
 
 			int[] shot = Console.ReadLine()
-				.Split(new char[] { ' ' },
-				StringSplitOptions.RemoveEmptyEntries)
+				.Split(new char[] { ' ' })
 				.Select(int.Parse)
 				.ToArray();
 
@@ -47,6 +47,7 @@ namespace _06.Target_Practice
 					}
 				}
 			}
+
 			return stairs;
 		}
 
@@ -94,7 +95,7 @@ namespace _06.Target_Practice
 
 		private static char[,] FillMatrix(string snake, int rows, int columns)
 		{
-			var matrix = new char[rows, columns];
+			char[,] matrix = new char[rows, columns];
 			bool isGoingLeft = true;
 			int snakeIndex = 0;
 
@@ -117,6 +118,7 @@ namespace _06.Target_Practice
 
 				isGoingLeft = !isGoingLeft;
 			}
+
 			return matrix;
 		}
 	}

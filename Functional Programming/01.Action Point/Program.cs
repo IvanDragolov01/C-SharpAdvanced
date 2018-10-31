@@ -11,7 +11,7 @@ namespace _01.Odd_Lines
 			Action<string> print = message => Console.WriteLine(message);
 			List<string> name = Console.ReadLine().Split(' ').ToList();
 
-			foreach (var word in name)
+			foreach (string word in name)
 			{
 				print(word);
 			}

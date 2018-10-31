@@ -22,10 +22,10 @@ namespace _05.Count_Symbols
 				}
 			}
 
-			foreach (var symbol in symbols)
+			foreach (KeyValuePair<char, int> symbol in symbols)
 			{
-				var key = symbol.Key;
-				var value = symbol.Value;
+				char key = symbol.Key;
+				int value = symbol.Value;
 				Console.WriteLine(key + ": " + value + " time/s");
 			}
 

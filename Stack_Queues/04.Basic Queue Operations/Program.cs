@@ -8,13 +8,13 @@ namespace _04.Basic_Queue_Operations
 	{
 		static void Main(string[] args)
 		{
-			var input = Console.ReadLine().Split().Select(int.Parse).ToArray();
+			int[] input = Console.ReadLine().Split().Select(int.Parse).ToArray();
 			int enqueueCount = input[0];
 			int dequeueCount = input[1];
 			int item = input[2];
 
-			var array = Console.ReadLine().Split().Select(int.Parse).ToArray();
-			var queue = new Queue<int>(array);
+			int[] array = Console.ReadLine().Split().Select(int.Parse).ToArray();
+			Queue<int> queue = new Queue<int>(array);
 
 			for (int i = 0; i < dequeueCount; i++)
 			{

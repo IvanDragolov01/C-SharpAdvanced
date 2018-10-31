@@ -52,7 +52,7 @@ namespace _07.The_V_Logger
 
 				if (counter == 1)
 				{
-					foreach (var followerName in item.Value["followers"])
+					foreach (string followerName in item.Value["followers"])
 					{
 						Console.WriteLine($"*  {followerName}");
 					}

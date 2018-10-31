@@ -9,11 +9,11 @@ namespace _01.ReverseNumbersWithStack
 		static void Main(string[] args)
 		{
 			int[] input = Console.ReadLine()
-			  .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-			  .Select(int.Parse)
-			  .ToArray();
+				.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+				.Select(int.Parse)
+				.ToArray();
 
-			var stack = new Stack<int>(input);
+			Stack<int> stack = new Stack<int>(input);
 			Console.WriteLine(string.Join(" ", stack));
 		}
 	}

@@ -14,7 +14,11 @@ namespace _06._Truck_Tour
 
 			for (int i = 0; i < n; i++)
 			{
-				var numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+				int[] numbers = Console.ReadLine()
+					.Split(' ')
+					.Select(int.Parse)
+					.ToArray();
+
 				int gas = numbers[0];
 				int distance = numbers[1];
 				int index = i;

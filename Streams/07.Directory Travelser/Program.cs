@@ -13,11 +13,11 @@ namespace _07.Directory_Travelser
 
 			var filesDictionary = new Dictionary<string, List<FileInfo>>();
 
-			var files = Directory.GetFiles(path);
+			string[] files = Directory.GetFiles(path);
 
-			foreach (var file in files)
+			foreach (string file in files)
 			{
-				var fileInfo = new FileInfo(file);
+				FileInfo fileInfo = new FileInfo(file);
 				string extension = fileInfo.Extension;
 
 				if (!filesDictionary.ContainsKey(extension))
@@ -38,9 +38,9 @@ namespace _07.Directory_Travelser
 			string desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 			string fullFileName = desktop + "report.txt";
 
-			using (var writer = new StreamWriter(fullFileName))
+			using (StreamWriter writer = new StreamWriter(fullFileName))
 			{
-				foreach (var pair in filesDictionary)
+				foreach (KeyValuePair<string, List<FileInfo>> pair in filesDictionary)
 				{
 					string extension = pair.Key;
 					writer.WriteLine(extension);
@@ -48,7 +48,7 @@ namespace _07.Directory_Travelser
 						.Value
 						.OrderByDescending(fi => fi.Length);
 
-					foreach (var fileInfo in fileInfos)
+					foreach (FileInfo fileInfo in fileInfos)
 					{
 						double filesize = (double)fileInfo.Length / 1024;
 						writer.WriteLine($"-- {fileInfo.Name} - {filesize:f3}kb");

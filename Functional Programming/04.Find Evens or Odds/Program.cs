@@ -9,7 +9,11 @@ namespace Find_Evens_or_Odds
 			Predicate<string> isOdd = x => x == "odd";
 			Predicate<string> isEven = x => x == "even";
 
-			int[] bounds = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+			int[] bounds = Console.ReadLine()
+				.Split(' ')
+				.Select(int.Parse)
+				.ToArray();
+
 			string input = Console.ReadLine();
 
 			if (isOdd.Invoke(input))

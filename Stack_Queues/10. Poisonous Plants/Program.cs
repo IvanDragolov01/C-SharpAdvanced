@@ -9,9 +9,11 @@ namespace _10.Poisonous_Plants
 		static void Main(string[] args)
 		{
 			int n = int.Parse(Console.ReadLine());
-
 			List<int> indexes = new List<int>();
-			List<int> plants = Console.ReadLine().Split().Select(int.Parse).ToList();
+			List<int> plants = Console.ReadLine()
+				.Split()
+				.Select(int.Parse)
+				.ToList();
 
 			int days = 0;
 

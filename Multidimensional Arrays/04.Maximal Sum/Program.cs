@@ -17,8 +17,8 @@ namespace _04.Maximal_Sum
 
 			for (int row = 0; row < matrix.GetLength(0); row++)
 			{
-				var rowValues = Console.ReadLine()
-					.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+				int[] rowValues = Console.ReadLine()
+					.Split(new[] { ' ' })
 					.Select(int.Parse)
 					.ToArray();
 
@@ -32,9 +32,9 @@ namespace _04.Maximal_Sum
 			{
 				for (int col = 0; col < matrix.GetLength(1) - 2; col++)
 				{
-					currentsum = matrix[row, col] + matrix[row + 1, col] + matrix[row, col + 1] +
-					+matrix[row + 1, col + 1] + matrix[row + 1, col + 2] + matrix[row + 2, col + 1] +
-					+matrix[row + 2, col + 2] + matrix[row + 2, col] + matrix[row, col + 2];
+					currentsum = matrix[row, col] + matrix[row + 1, col] + matrix[row, col + 1]
+					+ matrix[row + 1, col + 1] + matrix[row + 1, col + 2] + matrix[row + 2, col + 1]
+					+ matrix[row + 2, col + 2] + matrix[row + 2, col] + matrix[row, col + 2];
 
 					if (maxsum < currentsum)
 					{

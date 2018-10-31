@@ -39,11 +39,11 @@ namespace _06.Wardrobe
 			string targetColor = targetItem[0];
 			string itemName = targetItem[1];
 
-			foreach (var kvp in clothes)
+			foreach (KeyValuePair<string, Dictionary<string, int>> kvp in clothes)
 			{
 				Console.WriteLine($"{kvp.Key} clothes:");
 
-				foreach (var item in kvp.Value)
+				foreach (KeyValuePair<string, int> item in kvp.Value)
 				{
 					Console.Write($"* {item.Key} - {item.Value}");
 

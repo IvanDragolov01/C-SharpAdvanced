@@ -11,7 +11,8 @@ namespace _08._Full_DIrectory_Travelser
 		{
 			string path = Console.ReadLine();
 
-			using (var writeStream = new FileStream(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\08. Full DIrectory Travelser\report.txt", FileMode.Create))
+			using (FileStream writeStream = new FileStream
+				(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\08. Full DIrectory Travelser\report.txt", FileMode.Create))
 			{
 				void WriteLineToFile(string text)
 				{
@@ -29,7 +30,7 @@ namespace _08._Full_DIrectory_Travelser
 				{
 					WriteLineToFile(filesByExtension.Key);
 
-					foreach (var fileInfo in filesByExtension
+					foreach (FileInfo fileInfo in filesByExtension
 						.OrderBy(fi => fi.Length))
 					{
 						WriteLineToFile($"--{fileInfo.Name} - {Math.Round(fileInfo.Length / 1024d, 3)}kb");
@@ -42,7 +43,7 @@ namespace _08._Full_DIrectory_Travelser
 		{
 			files.AddRange(Directory.GetFiles(path).Select(file => new FileInfo(file)));
 
-			foreach (var directory in Directory.GetDirectories(path))
+			foreach (string directory in Directory.GetDirectories(path))
 			{
 				AddAllFilesInPath(directory, files);
 			}

@@ -7,11 +7,14 @@ namespace _07.Group_Numbers
 	{
 		static void Main(string[] args)
 		{
-			var numbers = Console.ReadLine().Split(new string[] { ", " }, StringSplitOptions.None)
-							   .Select(int.Parse).ToArray();
-			var sizes = new int[3];
+			int[] numbers = Console.ReadLine()
+				.Split(new string[] { ", " })
+				.Select(int.Parse)
+				.ToArray();
 
-			foreach (var number in numbers)
+			int[] sizes = new int[3];
+
+			foreach (int number in numbers)
 			{
 				sizes[Math.Abs(number % 3)]++;
 			}
@@ -24,7 +27,7 @@ namespace _07.Group_Numbers
 			}
 
 			int[] index = new int[3];
-			foreach (var number in numbers)
+			foreach (int number in numbers)
 			{
 				var remainder = Math.Abs(number % 3);
 				jaggedArray[remainder][index[remainder]] = number;

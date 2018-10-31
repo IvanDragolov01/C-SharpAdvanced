@@ -9,8 +9,8 @@ namespace _12.String_Matrix_Rotation
 	{
 		public static void Main()
 		{
-			var degrees = GetRotationDegrees();
-			var matrix = GetMatrix();
+			int degrees = GetRotationDegrees();
+			char[][] matrix = GetMatrix();
 
 			switch (degrees)
 			{
@@ -29,6 +29,7 @@ namespace _12.String_Matrix_Rotation
 				{
 					Console.Write(matrix[r][c]);
 				}
+
 				Console.WriteLine();
 			}
 		}
@@ -41,6 +42,7 @@ namespace _12.String_Matrix_Rotation
 				{
 					Console.Write(matrix[r][c]);
 				}
+
 				Console.WriteLine();
 			}
 		}
@@ -55,7 +57,7 @@ namespace _12.String_Matrix_Rotation
 
 		private static void PrintMatrix(char[][] matrix)
 		{
-			foreach (var row in matrix)
+			foreach (char[] row in matrix)
 			{
 				Console.WriteLine(string.Join("", row));
 			}
@@ -74,13 +76,13 @@ namespace _12.String_Matrix_Rotation
 				textList.Add(text);
 			}
 
-			var rows = textList.Count();
-			var cols = textList.Select(x => x.Count()).Max();
-			var matrix = new char[rows][];
+			int rows = textList.Count();
+			int cols = textList.Select(x => x.Count()).Max();
+			char[][] matrix = new char[rows][];
 
 			for (int row = 0; row < rows; row++)
 			{
-				var builder = new StringBuilder(textList[row]);
+				StringBuilder builder = new StringBuilder(textList[row]);
 				builder.Append(new String(' ', cols - textList[row].Length));
 				matrix[row] = builder.ToString().ToCharArray();
 			}
@@ -90,14 +92,15 @@ namespace _12.String_Matrix_Rotation
 
 		private static int GetRotationDegrees()
 		{
-			var input = Console.ReadLine().Trim(); // "Rotate(degrees)"
-			var degrees = int.Parse(input.Substring("Rotate(".Length, input.Length - 1 - "Rotate(".Length));
+			string input = Console.ReadLine().Trim(); // "Rotate(degrees)"
+			int degrees = int.Parse(input.Substring("Rotate(".Length, input.Length - 1 - "Rotate(".Length));
 			degrees %= 360;
 
 			while (degrees < 0)
 			{
 				degrees += 360;
 			}
+
 			return degrees;
 		}
 	}

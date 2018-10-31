@@ -16,7 +16,7 @@ namespace _07.LegoBlocks
 			for (int i = 0; i < n; i++)
 			{
 				array1[i] = Console.ReadLine()
-					.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+					.Split(new char[] { ' ' })
 					.Select(int.Parse)
 					.ToArray();
 			}
@@ -25,7 +25,7 @@ namespace _07.LegoBlocks
 
 			{
 				array2[i] = Console.ReadLine()
-					.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+					.Split(new char[] { ' ' })
 					.Select(int.Parse)
 					.Reverse()
 					.ToArray();

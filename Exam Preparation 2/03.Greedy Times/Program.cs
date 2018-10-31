@@ -14,7 +14,7 @@ namespace _03.Greedy_Times
 		{
 			long bagCapacity = long.Parse(Console.ReadLine());
 			string[] itemsInput = Console.ReadLine()
-				.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+				.Split(new char[] { ' ' });
 
 			var goldBag = new Dictionary<string, long>();
 			long goldQuantity = 0;
@@ -73,7 +73,7 @@ namespace _03.Greedy_Times
 
 		private static string PrintBag(Dictionary<string, long> bag, string type, long totalAmount)
 		{
-			var resultBuilder = new StringBuilder();
+			StringBuilder resultBuilder = new StringBuilder();
 
 			resultBuilder.AppendLine($"<{type}> ${totalAmount}");
 

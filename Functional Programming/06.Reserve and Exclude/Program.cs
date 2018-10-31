@@ -6,7 +6,9 @@ namespace _06.Reserve_and_Exclude
 	{
 		static void Main(string[] args)
 		{
-			int[] max = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
+			int[] max = Console.ReadLine().Split(" ")
+				.Select(int.Parse)
+				.ToArray();
 			int n = int.Parse(Console.ReadLine());
 
 			Func<int, int, int> isDivesible = (int x, int b) => x % b;

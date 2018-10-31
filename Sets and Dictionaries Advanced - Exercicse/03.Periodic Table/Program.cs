@@ -13,9 +13,9 @@ namespace _03.Periodic_Table
 
 			for (int i = 0; i < table; i++)
 			{
-				var brchemical = Console.ReadLine().Split(' ');
+				string[] brchemical = Console.ReadLine().Split(' ');
 
-				foreach (var item in brchemical)
+				foreach (string item in brchemical)
 				{
 					if (!chemical.ContainsKey(item))
 					{
@@ -40,7 +40,7 @@ namespace _03.Periodic_Table
 			//{
 			//	string[] input = Console.ReadLine().Split();
 
-			//	foreach (var chemicalName in input)
+			//	foreach (string chemicalName in input)
 			//	{
 			//		chemicals.Add(chemicalName);
 			//	}

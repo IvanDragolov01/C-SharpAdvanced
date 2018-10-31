@@ -25,9 +25,9 @@ namespace _04.Even_Times
 				}
 			}
 
-			foreach (var number in numbers)
+			foreach (KeyValuePair<int, int> number in numbers)
 			{
-				var value = number.Value;
+				int value = number.Value;
 
 				if (value % 2 == 0)
 				{
@@ -41,7 +41,7 @@ namespace _04.Even_Times
 
 			//for (int i = 0; i < n; i++)
 			//{
-			//	var num = int.Parse(Console.ReadLine());
+			//	int num = int.Parse(Console.ReadLine());
 
 			//	if (!numbers.ContainsKey(num))
 			//	{

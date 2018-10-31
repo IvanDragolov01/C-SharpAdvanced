@@ -9,16 +9,16 @@ namespace _02.BasicStackOperations
 		static void Main(string[] args)
 		{
 			int[] commands = Console.ReadLine()
-			   .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+			   .Split(new char[] { ' ' })
 			   .Select(int.Parse)
 			   .ToArray();
 
 			int[] numbers = Console.ReadLine()
-				.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+				.Split(new char[] { ' ' })
 				.Select(int.Parse)
 				.ToArray();
 
-			var stack = new Stack<int>();
+			Stack<int> stack = new Stack<int>();
 
 			for (int i = 0; i < commands[0] && i < numbers.Length; i++)
 			{

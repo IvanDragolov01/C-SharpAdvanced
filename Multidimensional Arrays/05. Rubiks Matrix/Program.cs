@@ -8,7 +8,7 @@ namespace RubiksMatrix
 		public static void Main()
 		{
 			int[] size = Console.ReadLine()
-				.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+				.Split(new char[] { ' ' })
 				.Select(int.Parse)
 				.ToArray();
 
@@ -28,8 +28,7 @@ namespace RubiksMatrix
 
 			for (int i = 0; i < numberOfCommands; i++)
 			{
-				string[] command = Console.ReadLine()
-					.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+				string[] command = Console.ReadLine().Split(new char[] { ' ' });
 				int comObj = int.Parse(command[0]);
 				int comMoves = int.Parse(command[2]);
 

@@ -9,13 +9,13 @@ namespace _03.MaximumElement
 		static void Main(string[] args)
 		{
 			int commandsCount = int.Parse(Console.ReadLine());
-			var stack = new Stack<int>();
-			var maxStack = new Stack<int>();
+			Stack<int> stack = new Stack<int>();
+			Stack<int> maxStack = new Stack<int>();
 			maxStack.Push(int.MinValue);
 
 			for (int i = 0; i < commandsCount; i++)
 			{
-				var command = Console.ReadLine()
+				int[] command = Console.ReadLine()
 					.Split()
 					.Select(int.Parse)
 					.ToArray();
@@ -23,7 +23,7 @@ namespace _03.MaximumElement
 				switch (command[0])
 				{
 					case 1:
-						var element = command[1];
+						int element = command[1];
 						stack.Push(element);
 
 						if (element >= maxStack.Peek())
@@ -33,7 +33,7 @@ namespace _03.MaximumElement
 
 						break;
 					case 2:
-						var poppedElement = stack.Pop();
+						int poppedElement = stack.Pop();
 
 						if (maxStack.Peek() == poppedElement)
 						{

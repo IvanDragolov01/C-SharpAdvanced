@@ -31,6 +31,7 @@ namespace _08._Radioactive_Bunnies
 					{
 						Die();
 					}
+
 					continue;
 				}
 
@@ -186,6 +187,7 @@ namespace _08._Radioactive_Bunnies
 					}
 				}
 			}
+
 			return matrix;
 		}
 	}

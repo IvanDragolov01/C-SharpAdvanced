@@ -9,9 +9,9 @@ namespace _01.Regeh
 		static void Main(string[] args)
 		{
 			string pattern = @"\[[a-zA-Z]+<(\d+)REGEH(\d+)>[a-zA-Z]+\]";
-			var input = Console.ReadLine();
-			var regex = new Regex(pattern);
-			var indexes = new List<int>();
+			string input = Console.ReadLine();
+			Regex regex = new Regex(pattern);
+			List<int> indexes = new List<int>();
 
 			foreach (Match match in regex.Matches(input))
 			{
@@ -22,10 +22,10 @@ namespace _01.Regeh
 
 			int currentIndex = 0;
 
-			foreach (var index in indexes)
+			foreach (int index in indexes)
 			{
 				currentIndex += index;
-				var charIndex = currentIndex % (input.Length - 1);
+				int charIndex = currentIndex % (input.Length - 1);
 				Console.Write(input[charIndex]);
 			}
 		}

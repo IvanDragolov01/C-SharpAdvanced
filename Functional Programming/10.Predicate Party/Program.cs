@@ -12,7 +12,7 @@ namespace _10.Predicate_Party
 
 			while ((input = Console.ReadLine()) != "Party!")
 			{
-				var split = input.Split();
+				string[] split = input.Split();
 				string funcName = split[0];
 				string criteriaName = split[1];
 				string argument = split[2];
@@ -35,6 +35,7 @@ namespace _10.Predicate_Party
 							{
 								doubled.Add(name);
 							}
+
 							doubled.Add(name);
 						}
 

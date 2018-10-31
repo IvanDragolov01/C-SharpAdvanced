@@ -9,19 +9,19 @@ namespace _03.Number_Wars
 		const int MaxCounter = 1_000_000;
 		static void Main(string[] args)
 		{
-			var firstAllCards = new Queue<string>(Console.ReadLine().Split());
-			var secondAllCards = new Queue<string>(Console.ReadLine().Split());
-			var turnsCounter = 0;
+			Queue<string> firstAllCards = new Queue<string>(Console.ReadLine().Split());
+			Queue<string> secondAllCards = new Queue<string>(Console.ReadLine().Split());
+			int turnsCounter = 0;
 			bool gameOver = false;
 
-			while (turnsCounter < MaxCounter &&
-				 firstAllCards.Count > 0 &&
-				 secondAllCards.Count > 0 &&
-				 !gameOver)
+			while (turnsCounter < MaxCounter
+				&& firstAllCards.Count > 0
+				&& secondAllCards.Count > 0
+				&& !gameOver)
 			{
 				turnsCounter++;
-				var firstCard = firstAllCards.Dequeue();
-				var secondCard = secondAllCards.Dequeue();
+				string firstCard = firstAllCards.Dequeue();
+				string secondCard = secondAllCards.Dequeue();
 
 				if (GetNumber(firstCard) > GetNumber(secondCard))
 				{
@@ -35,7 +35,7 @@ namespace _03.Number_Wars
 				}
 				else
 				{
-					var cardsHand = new List<string> { firstCard, secondCard };
+					List<string> cardsHand = new List<string> { firstCard, secondCard };
 
 					while (!gameOver)
 					{
@@ -46,8 +46,8 @@ namespace _03.Number_Wars
 
 							for (int counter = 0; counter < 3; counter++)
 							{
-								var firstHandCard = firstAllCards.Dequeue();
-								var secondHandCard = secondAllCards.Dequeue();
+								string firstHandCard = firstAllCards.Dequeue();
+								string secondHandCard = secondAllCards.Dequeue();
 								firstSum += GetChar(firstHandCard);
 								secondSum += GetChar(secondHandCard);
 								cardsHand.Add(firstHandCard);
@@ -72,7 +72,7 @@ namespace _03.Number_Wars
 				}
 			}
 
-			var result = "";
+			string result = " ";
 
 			if (firstAllCards.Count == secondAllCards.Count)
 			{
@@ -93,7 +93,7 @@ namespace _03.Number_Wars
 
 		private static void AddCardsToWinner(List<string> cardsHand, Queue<string> firstAllCard)
 		{
-			foreach (var card in cardsHand.OrderByDescending(c => GetNumber(c)).ThenByDescending(c => GetChar(c)))
+			foreach (string card in cardsHand.OrderByDescending(c => GetNumber(c)).ThenByDescending(c => GetChar(c)))
 			{
 				firstAllCard.Enqueue(card);
 			}

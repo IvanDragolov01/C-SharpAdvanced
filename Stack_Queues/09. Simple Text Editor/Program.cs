@@ -10,13 +10,13 @@ namespace _09._Simple_Text_Editor
 		{
 			int commandsCount = int.Parse(Console.ReadLine());
 
-			var oldVersions = new Stack<string>();
+			Stack<string> oldVersions = new Stack<string>();
 
-			var text = new StringBuilder();
+			StringBuilder text = new StringBuilder();
 
 			for (int i = 0; i < commandsCount; i++)
 			{
-				String[] commandInput = Console.ReadLine().Split();
+				string[] commandInput = Console.ReadLine().Split();
 
 				int command = int.Parse(commandInput[0]);
 

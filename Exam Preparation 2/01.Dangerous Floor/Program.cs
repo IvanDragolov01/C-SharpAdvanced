@@ -14,7 +14,8 @@ namespace _01.Dangerous_Floor
 			for (int row = 0; row < board.Length; row++)
 			{
 				board[row] = Console.ReadLine().Split(',')
-					.Select(char.Parse).ToArray();
+					.Select(char.Parse)
+					.ToArray();
 			}
 
 			string command;

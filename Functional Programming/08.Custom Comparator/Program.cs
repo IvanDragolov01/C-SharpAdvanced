@@ -30,12 +30,12 @@ namespace _08.Custom_Comparator
 			oddNumbers.Sort();
 			evenNumbers.Sort();
 
-			foreach (var even in evenNumbers)
+			foreach (int even in evenNumbers)
 			{
 				Console.Write(even + " ");
 			}
 
-			foreach (var odd in oddNumbers)
+			foreach (int odd in oddNumbers)
 			{
 				Console.Write(odd + " ");
 			}
