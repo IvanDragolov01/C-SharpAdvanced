@@ -20,8 +20,10 @@
 //				var patient = patientData[3];
 
 //				if (departments.ContainsKey(departament) == false)
+//				{
 //					departments.Add(departament, new List<string>());
-//				departments[departament].Add(patient);
+//					departments[departament].Add(patient);
+//				}
 
 //				if (doctors.ContainsKey(doctor) == false)
 //				{
@@ -44,6 +46,7 @@
 //				else
 //				{
 //					int roomNumber = 0;
+
 //					if (int.TryParse(splitCommand[1], out roomNumber))
 //					{
 //						var skip = 3 * (roomNumber - 1);
@@ -139,7 +142,6 @@ namespace _06.Hospital
 					foreach (var patient in pat)
 					{
 						Console.WriteLine(patient);
-
 					}
 				}
 

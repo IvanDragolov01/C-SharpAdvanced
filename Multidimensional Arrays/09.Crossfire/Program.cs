@@ -7,7 +7,10 @@ namespace _09.Crossfire
 	{
 		static void Main(string[] args)
 		{
-			int[] matrixSizes = Console.ReadLine().Split().Select(int.Parse).ToArray();
+			int[] matrixSizes = Console.ReadLine()
+				.Split()
+				.Select(int.Parse)
+				.ToArray();
 			int rows = matrixSizes[0];
 			int cols = matrixSizes[1];
 			var mainList = new List<List<int>>();
@@ -25,6 +28,7 @@ namespace _09.Crossfire
 			}
 
 			string command;
+
 			while ((command = Console.ReadLine()) != "Nuke it from orbit")
 			{
 				int[] commandArgs = command.Split().Select(int.Parse).ToArray();
@@ -47,6 +51,7 @@ namespace _09.Crossfire
 				for (int r = 0; r < mainList.Count; r++)
 				{
 					mainList[r].RemoveAll(x => x == 0);
+
 					if (mainList[r].Count == 0)
 					{
 						mainList.RemoveAt(r);

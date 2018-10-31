@@ -43,16 +43,14 @@ namespace _07.Directory_Travelser
 				foreach (var pair in filesDictionary)
 				{
 					string extension = pair.Key;
-
 					writer.WriteLine(extension);
-
-					var fileInfos = pair.Value.
-						OrderByDescending(fi => fi.Length);
+					var fileInfos = pair
+						.Value
+						.OrderByDescending(fi => fi.Length);
 
 					foreach (var fileInfo in fileInfos)
 					{
 						double filesize = (double)fileInfo.Length / 1024;
-
 						writer.WriteLine($"-- {fileInfo.Name} - {filesize:f3}kb");
 					}
 				}

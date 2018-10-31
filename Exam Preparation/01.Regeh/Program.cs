@@ -12,13 +12,16 @@ namespace _01.Regeh
 			var input = Console.ReadLine();
 			var regex = new Regex(pattern);
 			var indexes = new List<int>();
+
 			foreach (Match match in regex.Matches(input))
 			{
 				var groupsValue = match.Groups[1].ToString();
 				indexes.Add(int.Parse(match.Groups[1].Value));
 				indexes.Add(int.Parse(match.Groups[2].Value));
 			}
+
 			int currentIndex = 0;
+
 			foreach (var index in indexes)
 			{
 				currentIndex += index;

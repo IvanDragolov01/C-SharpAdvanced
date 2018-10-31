@@ -8,11 +8,14 @@ namespace _06.Target_Practice
 	{
 		static void Main(string[] args)
 		{
-			int[] dimensions = Console.ReadLine().Split(new char[] { ' ' })
+			int[] dimensions = Console.ReadLine()
+				.Split(new char[] { ' ' })
 				.Select(int.Parse).ToArray();
+
 			int rows = dimensions[0];
 			int columns = dimensions[1];
 			string snake = Console.ReadLine();
+
 			int[] shot = Console.ReadLine()
 				.Split(new char[] { ' ' },
 				StringSplitOptions.RemoveEmptyEntries)
@@ -30,6 +33,7 @@ namespace _06.Target_Practice
 			for (int col = 0; col < stairs.GetLength(1); col++)
 			{
 				int emptyRows = 0;
+
 				for (int row = stairs.GetLength(0) - 1; row >= 0; row--)
 				{
 					if (stairs[row, col] == ' ')
@@ -43,7 +47,6 @@ namespace _06.Target_Practice
 					}
 				}
 			}
-
 			return stairs;
 		}
 

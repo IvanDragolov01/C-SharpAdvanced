@@ -10,6 +10,7 @@ namespace _05.Applied_Arithmetics
 			Func<int, int> add = x => x + 1;
 			Func<int, int> multiply = x => x * 2;
 			Func<int, int> subtract = x => x - 1;
+
 			Action<int> print = x => Console.Write(x + " ");
 			int[] input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 			string command = "";

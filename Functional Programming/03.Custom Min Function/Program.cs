@@ -14,6 +14,7 @@ namespace _03.Custom_Min_Function
 			Func<int[], int> minFunc = arr =>
 			{
 				int min = arr[0];
+
 				for (int i = 1; i < arr.Length; i++)
 				{
 					if (min > arr[i])

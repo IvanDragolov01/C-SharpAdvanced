@@ -71,13 +71,11 @@ namespace TheHeiganDance
 
 			for (int i = 0; i < 3; i++)
 			{
-
 				damageArea[0][i] = rowHit + i - 1;
 			}
 
 			for (int i = 0; i < 3; i++)
 			{
-
 				damageArea[1][i] = colHit + i - 1;
 			}
 

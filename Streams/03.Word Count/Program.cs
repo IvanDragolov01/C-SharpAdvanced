@@ -41,6 +41,7 @@ namespace _03.Word_Count
 									{
 										sum2++;
 									}
+
 									if (c == input[i] || c1 == input[i])
 									{
 										sum3++;
@@ -55,6 +56,7 @@ namespace _03.Word_Count
 							if (sum1 > sum2 && sum1 > sum3)
 							{
 								writeStream.WriteLine(a + " - " + sum1);
+
 								if (sum2 > sum3)
 								{
 									writeStream.WriteLine(b + " - " + sum2);
@@ -69,6 +71,7 @@ namespace _03.Word_Count
 							else if (sum2 > sum1 && sum2 > sum3)
 							{
 								writeStream.WriteLine(b + " - " + sum2);
+
 								if (sum1 > sum3)
 								{
 									writeStream.WriteLine(a + " - " + sum1);

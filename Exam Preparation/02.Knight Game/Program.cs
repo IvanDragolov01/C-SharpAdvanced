@@ -37,6 +37,7 @@ namespace _02.Knight_Game
 						if (board[row][column] == 'K')
 						{
 							currentAttackPositions = CalculateAttackedPositions(row, column, board);
+
 							if (currentAttackPositions > maxAttackedPositions)
 							{
 								maxAttackedPositions = currentAttackPositions;
@@ -56,14 +57,23 @@ namespace _02.Knight_Game
 		static int CalculateAttackedPositions(int row, int column, char[][] board)
 		{
 			var currentAttackPositions = 0;
+
 			if (IsPositionAttacked(row - 2, column - 1, board)) currentAttackPositions++;
+
 			if (IsPositionAttacked(row - 2, column + 1, board)) currentAttackPositions++;
+
 			if (IsPositionAttacked(row - 1, column - 2, board)) currentAttackPositions++;
+
 			if (IsPositionAttacked(row - 1, column + 2, board)) currentAttackPositions++;
+
 			if (IsPositionAttacked(row + 1, column - 2, board)) currentAttackPositions++;
+
 			if (IsPositionAttacked(row + 1, column + 2, board)) currentAttackPositions++;
+
 			if (IsPositionAttacked(row + 2, column - 1, board)) currentAttackPositions++;
+
 			if (IsPositionAttacked(row + 2, column + 1, board)) currentAttackPositions++;
+
 			return currentAttackPositions;
 		}
 
@@ -75,7 +85,7 @@ namespace _02.Knight_Game
 
 		static bool IsPositionWithinBoard(int row, int column, int boardSize)
 		{
-			return row >= 0 && row < boardSize  && column >= 0 && column < boardSize ;
+			return row >= 0 && row < boardSize && column >= 0 && column < boardSize;
 		}
 	}
 }

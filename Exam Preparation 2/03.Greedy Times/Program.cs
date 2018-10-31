@@ -29,10 +29,9 @@ namespace _03.Greedy_Times
 			{
 				string itemName = itemsInput[i];
 				long itemAmount = long.Parse(itemsInput[i + 1]);
-
 				string itemType = GetItemType(itemName);
-
-				bool canInsertItem = CanPutItemInBag(itemType, itemAmount, bagCapacity, goldQuantity, gemQuantity, cashQuantity);
+				bool canInsertItem = CanPutItemInBag(itemType, itemAmount,
+					bagCapacity, goldQuantity, gemQuantity, cashQuantity);
 
 				if (itemType == "invalid" || !canInsertItem)
 				{
@@ -59,9 +58,11 @@ namespace _03.Greedy_Times
 			if (goldBag.Any())
 			{
 				Console.WriteLine(PrintBag(goldBag, "Gold", goldQuantity));
+
 				if (gemBag.Any())
 				{
 					Console.WriteLine(PrintBag(gemBag, "Gem", gemQuantity));
+
 					if (cashBag.Any())
 					{
 						Console.WriteLine(PrintBag(cashBag, "Cash", cashQuantity));
@@ -87,7 +88,8 @@ namespace _03.Greedy_Times
 			return result;
 		}
 
-		private static void InsertItem(Dictionary<string, long> bag, string itemName, long itemAmount)
+		private static void InsertItem(Dictionary<string, long> bag,
+			string itemName, long itemAmount)
 		{
 			if (!bag.ContainsKey(itemName))
 			{
@@ -97,7 +99,8 @@ namespace _03.Greedy_Times
 			bag[itemName] += itemAmount;
 		}
 
-		private static bool CanPutItemInBag(string itemType, long itemAmount, long bagCapacity, long goldQuantity, long gemQuantity, long cashQuantity)
+		private static bool CanPutItemInBag(string itemType, long itemAmount,
+				long bagCapacity, long goldQuantity, long gemQuantity, long cashQuantity)
 		{
 			long bagOccupied = goldQuantity + gemQuantity + cashQuantity;
 

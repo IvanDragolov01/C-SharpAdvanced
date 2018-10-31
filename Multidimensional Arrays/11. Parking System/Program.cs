@@ -22,13 +22,15 @@ namespace _11._Parking_System
 
 			while ((command = Console.ReadLine()) != "stop")
 			{
-				int[] commandArgs = command.Split()
+				int[] commandArgs = command
+					.Split()
 					.Select(int.Parse).
 					ToArray();
 
 				int entryRow = commandArgs[0];
 				int targetRow = commandArgs[1];
 				int targetCol = commandArgs[2];
+
 				if (IsSpotTaken(targetRow, targetCol))
 				{
 					targetCol = TryFindFreeSpot(targetRow, targetCol);
@@ -53,6 +55,7 @@ namespace _11._Parking_System
 			{
 				parking[targetRow] = new bool[cols];
 			}
+
 			parking[targetRow][targetCol] = true;
 		}
 
@@ -71,7 +74,6 @@ namespace _11._Parking_System
 					{
 						parkingCol = currentcol;
 						bestDistance = distance;
-
 					}
 				}
 			}
@@ -80,7 +82,6 @@ namespace _11._Parking_System
 
 		private static bool IsSpotTaken(int targetRow, int targetCol)
 		{
-
 			return parking[targetRow] != null && parking[targetRow][targetCol];
 		}
 	}

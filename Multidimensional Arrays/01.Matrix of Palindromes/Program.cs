@@ -7,7 +7,8 @@ namespace _01.Matrix_of_Palindromes
 	{
 		static void Main(string[] args)
 		{
-			var rowsAndColumns = Console.ReadLine().Split(' ')
+			var rowsAndColumns = Console.ReadLine()
+				.Split(' ')
 				.Select(int.Parse)
 				.ToArray();
 

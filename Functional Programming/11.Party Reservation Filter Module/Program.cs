@@ -44,7 +44,6 @@ namespace _11.Party_Reservation_Filter_Module
 					{
 						filter = name => name.Contains(argument);
 					}
-
 					filters.Add(filterKey, filter);
 				}
 			}

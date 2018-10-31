@@ -14,10 +14,10 @@ namespace _03.Number_Wars
 			var turnsCounter = 0;
 			bool gameOver = false;
 
-			while (turnsCounter < MaxCounter
-				&& firstAllCards.Count > 0
-				&& secondAllCards.Count > 0
-				&& !gameOver)
+			while (turnsCounter < MaxCounter &&
+				 firstAllCards.Count > 0 &&
+				 secondAllCards.Count > 0 &&
+				 !gameOver)
 			{
 				turnsCounter++;
 				var firstCard = firstAllCards.Dequeue();
@@ -53,6 +53,7 @@ namespace _03.Number_Wars
 								cardsHand.Add(firstHandCard);
 								cardsHand.Add(secondHandCard);
 							}
+
 							if (firstSum > secondSum)
 							{
 								AddCardsToWinner(cardsHand, firstAllCards);
@@ -66,7 +67,7 @@ namespace _03.Number_Wars
 						}
 						else
 							gameOver = true;
-							break;
+						break;
 					}
 				}
 			}
@@ -74,11 +75,18 @@ namespace _03.Number_Wars
 			var result = "";
 
 			if (firstAllCards.Count == secondAllCards.Count)
+			{
 				result = "Draw";
+			}
+
 			else if (firstAllCards.Count > secondAllCards.Count)
+			{
 				result = "First player wins";
+			}
 			else
+			{
 				result = "Second player wins";
+			}
 
 			Console.WriteLine($"{result} after {turnsCounter} turns");
 		}

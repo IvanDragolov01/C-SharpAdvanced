@@ -22,7 +22,6 @@ namespace _06.Zipping_Sliced_Files
 			}
 
 			string assembledDirectory = @"D:\CSharpAdvance\C-SharpAdvanced\Streams\06.Zipping Sliced Files\";
-
 			Assemble(files, assembledDirectory);
 		}
 

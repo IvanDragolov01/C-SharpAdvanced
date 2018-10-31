@@ -14,26 +14,21 @@ namespace _07.LegoBlocks
 			int count = 0;
 
 			for (int i = 0; i < n; i++)
-
 			{
 				array1[i] = Console.ReadLine()
 					.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
 					.Select(int.Parse)
 					.ToArray();
-
 			}
 
 			for (int i = 0; i < n; i++)
 
 			{
 				array2[i] = Console.ReadLine()
-
 					.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-
 					.Select(int.Parse)
 					.Reverse()
 					.ToArray();
-
 			}
 
 			int rowLength = array1[0].Length + array2[0].Length;

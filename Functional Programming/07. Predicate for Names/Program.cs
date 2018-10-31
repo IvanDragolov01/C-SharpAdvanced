@@ -14,7 +14,9 @@ namespace _07._Predicate_for_Names
 			foreach (var name in names)
 			{
 				if (equal(name, length) <= 0)
+				{
 					Console.WriteLine(name);
+				}
 			}
 		}
 	}

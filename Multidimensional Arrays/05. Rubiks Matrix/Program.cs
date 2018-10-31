@@ -17,6 +17,7 @@ namespace RubiksMatrix
 			for (int i = 0; i < size[0]; i++)
 			{
 				rubik[i] = new int[size[1]];
+
 				for (int j = 0; j < size[1]; j++)
 				{
 					rubik[i][j] = i * (size[1]) + j + 1;
@@ -27,7 +28,8 @@ namespace RubiksMatrix
 
 			for (int i = 0; i < numberOfCommands; i++)
 			{
-				string[] command = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+				string[] command = Console.ReadLine()
+					.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 				int comObj = int.Parse(command[0]);
 				int comMoves = int.Parse(command[2]);
 
