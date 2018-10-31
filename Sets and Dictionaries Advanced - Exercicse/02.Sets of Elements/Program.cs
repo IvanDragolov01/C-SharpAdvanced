@@ -33,7 +33,7 @@ namespace _02.Sets_of_Elements
 				}
 			}
 
-			foreach (var item in numbersn)
+			foreach (KeyValuePair<int, int> item in numbersn)
 			{
 				int key = item.Key;
 

@@ -22,7 +22,7 @@ namespace Sets_and_Dictionaries_Advanced___Exercicse
 				}
 			}
 
-			foreach (var name in names)
+			foreach (KeyValuePair<string, string> name in names)
 			{
 				string key = name.Key;
 				Console.WriteLine(key);
