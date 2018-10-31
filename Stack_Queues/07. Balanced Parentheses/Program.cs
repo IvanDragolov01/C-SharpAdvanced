@@ -18,6 +18,7 @@ namespace _07._Balanced_Parentheses
 
 			char[] opening = new[] { '(', '[', '{' };
 			char[] closing = new[] { ')', ']', '}' };
+
 			var stack = new Stack<char>();
 
 			foreach (var element in input)
@@ -30,6 +31,7 @@ namespace _07._Balanced_Parentheses
 				else if (closing.Contains(element))
 				{
 					var lastElement = stack.Pop();
+
 					int openingIndex = Array.IndexOf(opening, lastElement);
 
 					int closingIndex = Array.IndexOf(closing, element);

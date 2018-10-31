@@ -14,6 +14,7 @@ namespace _05._Calculate_Sequence_with_Queue
 			for (int i = 0; i < 50; i++)
 			{
 				long n = queue.Dequeue();
+
 				Console.Write(n + " ");
 				queue.Enqueue(n + 1);
 				queue.Enqueue(2 * n + 1);

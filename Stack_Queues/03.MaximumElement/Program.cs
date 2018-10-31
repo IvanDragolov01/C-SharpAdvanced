@@ -15,25 +15,31 @@ namespace _03.MaximumElement
 
 			for (int i = 0; i < commandsCount; i++)
 			{
-				var command = Console.ReadLine().Split()
-					.Select(int.Parse).ToArray();
+				var command = Console.ReadLine()
+					.Split()
+					.Select(int.Parse)
+					.ToArray();
 
 				switch (command[0])
 				{
 					case 1:
 						var element = command[1];
 						stack.Push(element);
+
 						if (element >= maxStack.Peek())
 						{
 							maxStack.Push(element);
 						}
+
 						break;
 					case 2:
 						var poppedElement = stack.Pop();
+
 						if (maxStack.Peek() == poppedElement)
 						{
 							maxStack.Pop();
 						}
+
 						break;
 					case 3:
 						int maxElement = maxStack.Peek();

@@ -22,8 +22,6 @@ namespace _06._Truck_Tour
 				pumps.Enqueue(new Tuple<int, int, int>(gas, distance, i));
 			}
 
-			bool found = false;
-
 			while (true)
 			{
 				long totalGas = 0;

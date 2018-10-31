@@ -9,8 +9,10 @@ namespace _10.Poisonous_Plants
 		static void Main(string[] args)
 		{
 			int n = int.Parse(Console.ReadLine());
+
 			List<int> indexes = new List<int>();
 			List<int> plants = Console.ReadLine().Split().Select(int.Parse).ToList();
+
 			int days = 0;
 
 			while (true)
@@ -29,6 +31,7 @@ namespace _10.Poisonous_Plants
 				}
 
 				int counter = 0;
+
 				for (int i = 0; i < indexes.Count; i++)
 				{
 					plants.RemoveAt(indexes[i] - counter);
