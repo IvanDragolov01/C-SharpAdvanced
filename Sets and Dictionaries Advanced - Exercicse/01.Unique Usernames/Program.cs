@@ -9,6 +9,7 @@ namespace Sets_and_Dictionaries_Advanced___Exercicse
 		static void Main(string[] args)
 		{
 			int n = int.Parse(Console.ReadLine());
+
 			Dictionary<string, string> names = new Dictionary<string, string>();
 
 			for (int i = 0; i < n; i++)

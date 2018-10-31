@@ -9,6 +9,7 @@ namespace _02.Sets_of_Elements
 		static void Main(string[] args)
 		{
 			var n = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
+
 			Dictionary<int, int> numbersn = new Dictionary<int, int>();
 			Dictionary<int, int> numbersm = new Dictionary<int, int>();
 

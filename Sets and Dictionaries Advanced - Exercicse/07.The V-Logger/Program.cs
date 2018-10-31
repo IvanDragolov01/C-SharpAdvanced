@@ -10,6 +10,7 @@ namespace _07.The_V_Logger
 		{
 			var vloggers = new Dictionary<string, Dictionary<string, SortedSet<string>>>();
 			string input;
+
 			while ((input = Console.ReadLine()) != "Statistics")
 			{
 				string[] elements = input.Split();
@@ -46,7 +47,8 @@ namespace _07.The_V_Logger
 
 			foreach (var item in sortedVloggers)
 			{
-				Console.WriteLine($"{counter}. {item.Key} : {item.Value["followers"].Count} followers, {item.Value["following"].Count} following");
+				Console.WriteLine($"{counter}. {item.Key} : {item.Value["followers"].Count} followers," +
+								  $" {item.Value["following"].Count} following");
 
 				if (counter == 1)
 				{

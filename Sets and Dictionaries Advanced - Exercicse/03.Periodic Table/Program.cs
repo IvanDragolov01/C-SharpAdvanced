@@ -8,6 +8,7 @@ namespace _03.Periodic_Table
 		static void Main(string[] args)
 		{
 			int table = int.Parse(Console.ReadLine());
+
 			SortedDictionary<string, int> chemical = new SortedDictionary<string, int>();
 
 			for (int i = 0; i < table; i++)
@@ -32,6 +33,7 @@ namespace _03.Periodic_Table
 			//second solution - Hash Set
 
 			//SortedSet<string> chemicals = new SortedSet<string>();
+
 			//int n = int.Parse(Console.ReadLine());
 
 			//for (int i = 0; i < n; i++)

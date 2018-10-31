@@ -42,6 +42,7 @@ namespace _06.Wardrobe
 			foreach (var kvp in clothes)
 			{
 				Console.WriteLine($"{kvp.Key} clothes:");
+
 				foreach (var item in kvp.Value)
 				{
 					Console.Write($"* {item.Key} - {item.Value}");

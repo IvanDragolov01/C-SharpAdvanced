@@ -53,6 +53,7 @@ namespace _08.Raking
 
 			var topStudent = students.OrderByDescending(x => x.Value.Sum(s => s.Value)).FirstOrDefault();
 			Console.WriteLine($"Best candidate is {topStudent.Key} with total {topStudent.Value.Sum(x => x.Value)} points.");
+
 			Console.WriteLine("Ranking: ");
 
 			var sortedStrudents = students.OrderBy(x => x.Key).ToDictionary(p => p.Key, y => y.Value);
