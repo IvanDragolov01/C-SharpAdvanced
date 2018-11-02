@@ -12,7 +12,11 @@ namespace _08.Raking
 			var students = new Dictionary<string, Dictionary<string, int>>();
 			string input;
 
-			while ((input = Console.ReadLine()) != "end of contests")
+			do
+			{
+				input = Console.ReadLine();
+			}
+			while (input != "end of contests");
 			{
 				string[] elements = input.Split(":");
 				string contestName = elements[0];
@@ -24,7 +28,11 @@ namespace _08.Raking
 				}
 			}
 
-			while ((input = Console.ReadLine()) != "end of submissions")
+			do
+			{
+				input = Console.ReadLine();
+			}
+			while (input != "end of submissions");
 			{
 				string[] elements = input.Split("=>");
 				string contestName = elements[0];

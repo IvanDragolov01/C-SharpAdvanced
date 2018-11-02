@@ -11,7 +11,11 @@ namespace _07.The_V_Logger
 			var vloggers = new Dictionary<string, Dictionary<string, SortedSet<string>>>();
 			string input;
 
-			while ((input = Console.ReadLine()) != "Statistics")
+			do
+			{
+				input = Console.ReadLine();
+			}
+			while (input != "Statistics");
 			{
 				string[] elements = input.Split();
 				string user = elements[0];
