@@ -24,9 +24,9 @@ namespace _03.Periodic_Table
 				}
 			}
 
-			foreach (var item in chemical)
+			foreach (KeyValuePair<string, int> item in chemical)
 			{
-				var key = item.Key;
+				string key = item.Key;
 				Console.Write(key + " ");
 			}
 
