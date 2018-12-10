@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-namespace _03.Greedy_Times
+﻿namespace _03.Greedy_Times
 {
 	using System;
 	using System.Collections.Generic;
@@ -16,13 +13,13 @@ namespace _03.Greedy_Times
 			string[] itemsInput = Console.ReadLine()
 				.Split(new char[] { ' ' });
 
-			var goldBag = new Dictionary<string, long>();
+			Dictionary<string, long> goldBag = new Dictionary<string, long>();
 			long goldQuantity = 0;
 
-			var gemBag = new Dictionary<string, long>();
+			Dictionary<string, long> gemBag = new Dictionary<string, long>();
 			long gemQuantity = 0;
 
-			var cashBag = new Dictionary<string, long>();
+			Dictionary<string, long> cashBag = new Dictionary<string, long>();
 			long cashQuantity = 0;
 
 			for (int i = 0; i < itemsInput.Length; i += 2)
@@ -77,9 +74,11 @@ namespace _03.Greedy_Times
 
 			resultBuilder.AppendLine($"<{type}> ${totalAmount}");
 
-			var orderedBag = bag.OrderByDescending(i => i.Key).ThenBy(i => i.Value);
+			IOrderedEnumerable<KeyValuePair<string, long>> orderedBag = bag
+				.OrderByDescending(i => i.Key)
+				.ThenBy(i => i.Value);
 
-			foreach (var item in orderedBag)
+			foreach (KeyValuePair<string, long> item in orderedBag)
 			{
 				resultBuilder.AppendLine($"##{item.Key} - {item.Value}");
 			}

@@ -65,13 +65,16 @@ namespace _12.String_Matrix_Rotation
 
 		private static char[][] GetMatrix()
 		{
-			var textList = new List<string>();
+			List<string> textList = new List<string>();
 
 			while (true)
 			{
 				string text = Console.ReadLine();
 
-				if (text == "END") break;
+				if (text == "END")
+				{
+					break;
+				}
 
 				textList.Add(text);
 			}

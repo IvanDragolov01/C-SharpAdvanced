@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+
 namespace _09.Crossfire
 {
 	class Program
@@ -14,7 +15,7 @@ namespace _09.Crossfire
 
 			int rows = matrixSizes[0];
 			int cols = matrixSizes[1];
-			var mainList = new List<List<int>>();
+			List<List<int>> mainList = new List<List<int>>();
 
 			for (int r = 0; r < rows; r++)
 			{

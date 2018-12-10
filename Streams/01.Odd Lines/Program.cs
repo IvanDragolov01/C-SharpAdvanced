@@ -1,31 +1,31 @@
-﻿using System;
-using System.IO;
+﻿//using System;
+//using System.IO;
 
-namespace Streams_Exercise
-{
-	class Program
-	{
-		static void Main(string[] args)
-		{
-			using (StreamReader stream = new StreamReader
-				(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\Streams-Exercise\text.txt"))
-			{
-				int lineNumber = 1;
-				string line;
+//namespace Streams_Exercise
+//{
+//	class Program
+//	{
+//		static void Main(string[] args)
+//		{
+//			using (StreamReader stream = new StreamReader
+//				(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\Streams-Exercise\text.txt"))
+//			{
+//				int lineNumber = 1;
+//				string line;
 
-				while ((line = stream.ReadLine()) != null)
-				{
-					if (lineNumber % 2 == 0)
-					{
-						Console.WriteLine(line);
-					}
+//				while ((line = stream.ReadLine()) != null)
+//				{
+//					if (lineNumber % 2 == 0)
+//					{
+//						Console.WriteLine(line);
+//					}
 
-					lineNumber++;
-				}
-			}
-		}
-	}
-}
+//					lineNumber++;
+//				}
+//			}
+//		}
+//	}
+//}
 /*
 using System;
 using System.IO;
@@ -36,9 +36,9 @@ namespace Streams_Exercise
 	{
 		static void Main(string[] args)
 		{
-			using (var stream = new StreamReader(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\Streams-Exercise\text.txt"))
+			using (StreamReader stream = new StreamReader(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\Streams-Exercise\text.txt"))
 			{
-				var lineNumber = 0;
+				int lineNumber = 0;
 
 				string line;
 
@@ -67,9 +67,9 @@ namespace Streams_Exercise
 	{
 		static void Main(string[] args)
 		{
-			using (var stream = new StreamReader(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\Streams-Exercise\text.txt"))
+			using (StreamReader stream = new StreamReader(@"D:\CSharpAdvance\C-SharpAdvanced\Streams\Streams-Exercise\text.txt"))
 			{
-				var lineNumber = 0;
+				int lineNumber = 0;
 				string line;
 
 				while ((line = stream.ReadLine()) != null)

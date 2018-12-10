@@ -9,7 +9,7 @@ namespace _06.Wardrobe
 		static void Main(string[] args)
 		{
 			int n = int.Parse(Console.ReadLine());
-			var clothes = new Dictionary<string, Dictionary<string, int>>();
+			Dictionary<string, Dictionary<string, int>> clothes = new Dictionary<string, Dictionary<string, int>>();
 
 			for (int i = 0; i < n; i++)
 			{

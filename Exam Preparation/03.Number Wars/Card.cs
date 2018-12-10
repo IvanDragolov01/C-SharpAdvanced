@@ -8,6 +8,7 @@ namespace _03.Number_Wars
 	{
 		//working between 70 of 100 and 90 of 100
 		//const int MaxCounter = 1_000_000;
+
 		//static void Main(string[] args)
 		//{
 		//	Queue<string> firstAllCards = new Queue<string>(Console.ReadLine().Split());
@@ -94,7 +95,8 @@ namespace _03.Number_Wars
 
 		//private static void AddCardsToWinner(List<string> cardsHand, Queue<string> firstAllCard)
 		//{
-		//	foreach (string card in cardsHand.OrderByDescending(c => GetNumber(c)).ThenByDescending(c => GetChar(c)))
+		//	foreach (string card in cardsHand.OrderByDescending(c => GetNumber(c))
+		//.ThenByDescending(c => GetChar(c)))
 		//	{
 		//		firstAllCard.Enqueue(card);
 		//	}
@@ -264,6 +266,7 @@ namespace _03.Number_Wars
 				{
 					sum += playerCards[i].Symbol;
 				}
+
 				return sum;
 			}
 
@@ -272,7 +275,9 @@ namespace _03.Number_Wars
 				List<Card> allCards = new List<Card>();
 				firstPlayerNextCards.AddRange(secondPlayerNextCards);
 
-				foreach (Card card in firstPlayerNextCards.OrderByDescending(n => n.Number).ThenByDescending(s => s.Symbol))
+				foreach (Card card in firstPlayerNextCards
+					.OrderByDescending(n => n.Number)
+					.ThenByDescending(s => s.Symbol))
 				{
 					allCards.Add(card);
 				}
@@ -298,8 +303,8 @@ namespace _03.Number_Wars
 
 		public Card(int number, char symbol)
 		{
-			this.Number = number;
-			this.Symbol = symbol;
+			Number = number;
+			Symbol = symbol;
 		}
 
 		public int Number { get; set; }

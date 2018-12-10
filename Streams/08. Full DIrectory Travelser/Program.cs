@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+
 namespace _08._Full_DIrectory_Travelser
 {
 	public class FullDirectoryTraversal
@@ -23,7 +24,7 @@ namespace _08._Full_DIrectory_Travelser
 				List<FileInfo> files = new List<FileInfo>();
 				AddAllFilesInPath(path, files);
 
-				foreach (var filesByExtension in files
+				foreach (IGrouping<string, FileInfo> filesByExtension in files
 					.GroupBy(f => f.Extension)
 					.OrderByDescending(gr => gr.Count())
 					.ThenBy(gr => gr.Key))

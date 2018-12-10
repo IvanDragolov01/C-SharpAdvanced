@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+
 namespace _05.Applied_Arithmetics
 {
 	class Program
@@ -12,7 +13,10 @@ namespace _05.Applied_Arithmetics
 			Func<int, int> subtract = x => x - 1;
 
 			Action<int> print = x => Console.Write(x + " ");
-			int[] input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+			int[] input = Console.ReadLine().Split(' ')
+				.Select(int.Parse)
+				.ToArray();
+
 			string command = "";
 
 			while (command != "end")
@@ -25,7 +29,7 @@ namespace _05.Applied_Arithmetics
 						{
 							foreach (int number in input)
 							{
-								input[i] = (add(number));
+								input[i] = add(number);
 								i++;
 							}
 

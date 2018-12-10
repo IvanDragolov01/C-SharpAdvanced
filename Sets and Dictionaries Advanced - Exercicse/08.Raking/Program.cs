@@ -8,8 +8,8 @@ namespace _08.Raking
 	{
 		static void Main(string[] args)
 		{
-			var contests = new Dictionary<string, string>();
-			var students = new Dictionary<string, Dictionary<string, int>>();
+			Dictionary<string, string> contests = new Dictionary<string, string>();
+			Dictionary<string, Dictionary<string, int>> students = new Dictionary<string, Dictionary<string, int>>();
 			string input;
 
 			do
@@ -59,12 +59,17 @@ namespace _08.Raking
 				}
 			}
 
-			var topStudent = students.OrderByDescending(x => x.Value.Sum(s => s.Value)).FirstOrDefault();
-			Console.WriteLine($"Best candidate is {topStudent.Key} with total {topStudent.Value.Sum(x => x.Value)} points.");
+			KeyValuePair<string, Dictionary<string, int>> topStudent = students
+				.OrderByDescending(x => x.Value.Sum(s => s.Value))
+				.FirstOrDefault();
+			Console.WriteLine($"Best candidate is {topStudent.Key} with total " +
+				$"{topStudent.Value.Sum(x => x.Value)} points.");
 
 			Console.WriteLine("Ranking: ");
 
-			var sortedStrudents = students.OrderBy(x => x.Key).ToDictionary(p => p.Key, y => y.Value);
+			Dictionary<string, Dictionary<string, int>> sortedStrudents = students
+				.OrderBy(x => x.Key)
+				.ToDictionary(p => p.Key, y => y.Value);
 
 			foreach (KeyValuePair<string, Dictionary<string, int>> kvp in sortedStrudents)
 			{

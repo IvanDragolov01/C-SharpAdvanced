@@ -8,7 +8,9 @@ namespace _07.The_V_Logger
 	{
 		public static void Main(string[] args)
 		{
-			var vloggers = new Dictionary<string, Dictionary<string, SortedSet<string>>>();
+			Dictionary<string, Dictionary<string, SortedSet<string>>> vloggers = new Dictionary<string,
+				Dictionary<string, SortedSet<string>>>();
+
 			string input;
 
 			do
@@ -45,11 +47,11 @@ namespace _07.The_V_Logger
 
 			Console.WriteLine($"The V-Logger has a total of {vloggers.Count} vloggers in its logs.");
 
-			var sortedVloggers = vloggers.OrderByDescending(x => x.Value["followers"].Count)
-													.ThenBy(x => x.Value["following"].Count);
+			IOrderedEnumerable<KeyValuePair<string, Dictionary<string, SortedSet<string>>>> sortedVloggers = vloggers.OrderByDescending(x => x.Value["followers"].Count)
+			.ThenBy(x => x.Value["following"].Count);
 			int counter = 1;
 
-			foreach (var item in sortedVloggers)
+			foreach (KeyValuePair<string, Dictionary<string, SortedSet<string>>> item in sortedVloggers)
 			{
 				Console.WriteLine($"{counter}. {item.Key} : {item.Value["followers"].Count} followers," +
 								  $" {item.Value["following"].Count} following");

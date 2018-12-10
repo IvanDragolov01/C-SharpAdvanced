@@ -8,7 +8,7 @@ namespace _05.Square_with_maximum_sum
 		static void Main(string[] args)
 		{
 			int[] rowsAndColumns = Console.ReadLine()
-				.Split(new string[] { ", " })
+				.Split(", ")
 				.Select(int.Parse)
 				.ToArray();
 
@@ -17,7 +17,7 @@ namespace _05.Square_with_maximum_sum
 			for (int rows = 0; rows < rowsAndColumns[0]; rows++)
 			{
 				int[] rowValues = Console.ReadLine()
-					.Split(new string[] { ", " })
+					.Split(", ")
 					.Select(int.Parse)
 					.ToArray();
 

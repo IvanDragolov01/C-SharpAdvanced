@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+
 namespace _03.Custom_Min_Function
 {
 	class Program
@@ -22,6 +23,7 @@ namespace _03.Custom_Min_Function
 						min = arr[i];
 					}
 				}
+
 				return min;
 			};
 

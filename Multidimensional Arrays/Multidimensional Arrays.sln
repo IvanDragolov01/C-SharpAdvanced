@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Sum Matrix Columns", "02. Sum Matrix Columns\02. Sum Matrix Columns.csproj", "{85D69858-42F0-4C3B-8493-2866D81F7639}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Sum Matrix Columns - Lab", "02. Sum Matrix Columns - Lab\02. Sum Matrix Columns.csproj", "{85D69858-42F0-4C3B-8493-2866D81F7639}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.Square with maximum sum", "05.Square with maximum sum\05.Square with maximum sum.csproj", "{B112309F-1EF8-428F-AE07-8060F555713A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.Square with maximum sum - Lab", "05.Square with maximum sum - Lab\05.Square with maximum sum.csproj", "{B112309F-1EF8-428F-AE07-8060F555713A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.Pascal Triangle", "08.Pascal Triangle\08.Pascal Triangle.csproj", "{D07D377E-F944-4FCE-AC8D-530064E0CD42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.Pascal Triangle - Lab", "08.Pascal Triangle - Lab\08.Pascal Triangle.csproj", "{D07D377E-F944-4FCE-AC8D-530064E0CD42}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.Group Numbers", "07.Group Numbers\07.Group Numbers.csproj", "{1BA06733-8536-417B-9CC6-CEF5ECE858CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.Group Numbers - Lab", "07.Group Numbers - Lab\07.Group Numbers.csproj", "{1BA06733-8536-417B-9CC6-CEF5ECE858CE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Sum Matrix Elements", "01. Sum Matrix Elements\01. Sum Matrix Elements.csproj", "{20EBD430-F107-4D96-8563-F7ED0345A64E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Sum Matrix Elements - Lab", "01. Sum Matrix Elements - Lab\01. Sum Matrix Elements.csproj", "{20EBD430-F107-4D96-8563-F7ED0345A64E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lab", "Lab", "{70FE0667-3E41-4341-A2DD-9264406C7CCE}"
 EndProject

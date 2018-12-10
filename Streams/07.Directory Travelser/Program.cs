@@ -11,7 +11,7 @@ namespace _07.Directory_Travelser
 		{
 			string path = Console.ReadLine();
 
-			var filesDictionary = new Dictionary<string, List<FileInfo>>();
+			Dictionary<string, List<FileInfo>> filesDictionary = new Dictionary<string, List<FileInfo>>();
 
 			string[] files = Directory.GetFiles(path);
 
@@ -44,7 +44,7 @@ namespace _07.Directory_Travelser
 				{
 					string extension = pair.Key;
 					writer.WriteLine(extension);
-					var fileInfos = pair
+					IOrderedEnumerable<FileInfo> fileInfos = pair
 						.Value
 						.OrderByDescending(fi => fi.Length);
 

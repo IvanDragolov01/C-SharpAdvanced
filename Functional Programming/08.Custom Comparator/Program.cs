@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+
 namespace _08.Custom_Comparator
 {
 	class Program
@@ -10,7 +11,11 @@ namespace _08.Custom_Comparator
 			Predicate<int> isDivesible1 = x => x % 2 != 0;
 			Predicate<int> isDivesible2 = x => x % 2 == 0;
 
-			List<int> input = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
+			List<int> input = Console.ReadLine()
+				.Split(' ')
+				.Select(int.Parse)
+				.ToList();
+
 			List<int> evenNumbers = new List<int>();
 			List<int> oddNumbers = new List<int>();
 

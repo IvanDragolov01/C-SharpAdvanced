@@ -9,7 +9,7 @@ namespace _12.Inferno_III
 		static void Main(string[] args)
 		{
 			List<int> gems = Console.ReadLine().Split().Select(int.Parse).ToList();
-			var filters = new Dictionary<string, Func<List<int>, List<int>>>();
+			Dictionary<string, Func<List<int>, List<int>>> filters = new Dictionary<string, Func<List<int>, List<int>>>();
 			string command;
 
 			while ((command = Console.ReadLine()) != "Forge")
@@ -27,9 +27,9 @@ namespace _12.Inferno_III
 		{
 			List<int> filtered = new List<int>();
 
-			foreach (var pair in filters)
+			foreach (KeyValuePair<string, Func<List<int>, List<int>>> pair in filters)
 			{
-				var filter = pair.Value;
+				Func<List<int>, List<int>> filter = pair.Value;
 				filtered.AddRange(filter(gems));
 			}
 

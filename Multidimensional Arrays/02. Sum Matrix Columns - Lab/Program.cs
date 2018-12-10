@@ -7,7 +7,7 @@ namespace _02._Sum_Matrix_Columns
 		static void Main(string[] args)
 		{
 			int[] rowsAndColumns = Console.ReadLine()
-				.Split(new string[] { ", " })
+				.Split(", ")
 				.Select(int.Parse)
 				.ToArray();
 
@@ -15,8 +15,8 @@ namespace _02._Sum_Matrix_Columns
 
 			for (int rows = 0; rows < rowsAndColumns[0]; rows++)
 			{
-				var rowValues = Console.ReadLine()
-					.Split(new string[] { ", " })
+				int[] rowValues = Console.ReadLine()
+					.Split(", ")
 					.Select(int.Parse)
 					.ToArray();
 

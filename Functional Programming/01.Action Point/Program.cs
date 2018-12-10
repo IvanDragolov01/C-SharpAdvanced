@@ -9,7 +9,8 @@ namespace _01.Odd_Lines
 		static void Main(string[] args)
 		{
 			Action<string> print = message => Console.WriteLine(message);
-			List<string> name = Console.ReadLine().Split(' ').ToList();
+			List<string> name = Console.ReadLine().Split(' ')
+				.ToList();
 
 			foreach (string word in name)
 			{

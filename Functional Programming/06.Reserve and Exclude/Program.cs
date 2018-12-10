@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+
 namespace _06.Reserve_and_Exclude
 {
 	class Program
@@ -9,6 +10,7 @@ namespace _06.Reserve_and_Exclude
 			int[] max = Console.ReadLine().Split(" ")
 				.Select(int.Parse)
 				.ToArray();
+
 			int n = int.Parse(Console.ReadLine());
 
 			Func<int, int, int> isDivesible = (int x, int b) => x % b;

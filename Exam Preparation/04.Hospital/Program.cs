@@ -69,84 +69,86 @@ namespace _04.Hospital
 	}
 }
 
-//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//namespace _06.Hospital
-//{
-//	class Hospital
-//	{
-//		static void Main(string[] args)
-//		{
-//			Dictionary<string, List<string>> departments = new Dictionary<string, List<string>>();
-//			Dictionary<string, List<string>> doctors = new Dictionary<string, List<string>>();
-//			string line = Console.ReadLine();
+/*
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
-//			while (line != "Output")
-//			{
-//				string[] tokens = line.Split().ToArray();
-//				string dep = tokens[0];
-//				string dfn = tokens[1] + " " + tokens[2];
-//				string patient = tokens[3];
+namespace _06.Hospital
+{
+	class Hospital
+	{
+		static void Main(string[] args)
+		{
+			Dictionary<string, List<string>> departments = new Dictionary<string, List<string>>();
+			Dictionary<string, List<string>> doctors = new Dictionary<string, List<string>>();
+			string line = Console.ReadLine();
 
-//				if (!departments.ContainsKey(dep))
-//				{
-//					departments[dep] = new List<string>();
-//				}
+			while (line != "Output")
+			{
+				string[] tokens = line.Split().ToArray();
+				string dep = tokens[0];
+				string dfn = tokens[1] + " " + tokens[2];
+				string patient = tokens[3];
 
-//				departments[dep].Add(patient);
+				if (!departments.ContainsKey(dep))
+				{
+					departments[dep] = new List<string>();
+				}
 
-//				if (!doctors.ContainsKey(dfn))
-//				{
-//					doctors[dfn] = new List<string>();
-//				}
+				departments[dep].Add(patient);
 
-//				doctors[dfn].Add(patient);
-//				line = Console.ReadLine();
-//			}
+				if (!doctors.ContainsKey(dfn))
+				{
+					doctors[dfn] = new List<string>();
+				}
 
-//			line = Console.ReadLine().Trim();
+				doctors[dfn].Add(patient);
+				line = Console.ReadLine();
+			}
 
-//			while (line != "End")
-//			{
-//				string[] token = line.Split().ToArray();
+			line = Console.ReadLine().Trim();
 
-//				if (token.Length == 1)
-//				{
-//					foreach (string patients in departments[line])
-//					{
-//						Console.WriteLine(patients);
-//					}
-//				}
-//				else if (int.TryParse(token[1], out int result))
-//				{
-//					if (int.Parse(token[1]) > 20)
-//					{
-//						continue;
-//					}
+			while (line != "End")
+			{
+				string[] token = line.Split().ToArray();
 
-//					List<string> patients = departments[token[0]];
-//					var room = patients.Skip(3 * (int.Parse(token[1]) - 1)).Take(3).OrderBy(p => p);
+				if (token.Length == 1)
+				{
+					foreach (string patients in departments[line])
+					{
+						Console.WriteLine(patients);
+					}
+				}
+				else if (int.TryParse(token[1], out int result))
+				{
+					if (int.Parse(token[1]) > 20)
+					{
+						continue;
+					}
 
-//					foreach (string patient in room)
-//					{
-//						Console.WriteLine(patient);
-//					}
-//				}
-//				else
-//				{
-//					List<string> pat = doctors[line];
-//					pat.Sort();
+					List<string> patients = departments[token[0]];
+					var room = patients.Skip(3 * (int.Parse(token[1]) - 1)).Take(3).OrderBy(p => p);
 
-//					foreach (string patient in pat)
-//					{
-//						Console.WriteLine(patient);
-//					}
-//				}
+					foreach (string patient in room)
+					{
+						Console.WriteLine(patient);
+					}
+				}
+				else
+				{
+					List<string> pat = doctors[line];
+					pat.Sort();
 
-//				line = Console.ReadLine();
-//			}
-//		}
-//	}
-//}
+					foreach (string patient in pat)
+					{
+						Console.WriteLine(patient);
+					}
+				}
+
+				line = Console.ReadLine();
+			}
+		}
+	}
+}
+*/

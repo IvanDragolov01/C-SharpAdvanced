@@ -10,7 +10,10 @@ namespace _09.List_of_Predicates
 			Func<int, int, int> divisible = (int x, int y) => x % y;
 
 			int n = int.Parse(Console.ReadLine());
-			int[] input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+			int[] input = Console.ReadLine()
+				.Split(' ')
+				.Select(int.Parse)
+				.ToArray();
 
 			for (int i = 1; i <= n; i++)
 			{
@@ -26,7 +29,10 @@ namespace _09.List_of_Predicates
 					}
 				}
 
-				if (times == input.Length) Console.Write(i + " ");
+				if (times == input.Length)
+				{
+					Console.Write(i + " ");
+				}
 			}
 		}
 	}

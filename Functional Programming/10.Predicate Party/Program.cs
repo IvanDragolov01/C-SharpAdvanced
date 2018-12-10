@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+
 namespace _10.Predicate_Party
 {
 	class Program
@@ -29,7 +30,7 @@ namespace _10.Predicate_Party
 					{
 						List<string> doubled = new List<string>();
 
-						foreach (var name in names)
+						foreach (string name in names)
 						{
 							if (crit(name))
 							{

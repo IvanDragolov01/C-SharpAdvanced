@@ -53,7 +53,7 @@ namespace _06.Target_Practice
 
 		private static void PrintMatrix(char[,] stairs)
 		{
-			var sb = new StringBuilder();
+			StringBuilder sb = new StringBuilder();
 
 			for (int row = 0; row < stairs.GetLength(0); row++)
 			{

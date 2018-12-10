@@ -8,7 +8,7 @@ namespace _07.Group_Numbers
 		static void Main(string[] args)
 		{
 			int[] numbers = Console.ReadLine()
-				.Split(new string[] { ", " })
+				.Split(", ")
 				.Select(int.Parse)
 				.ToArray();
 
@@ -29,7 +29,7 @@ namespace _07.Group_Numbers
 			int[] index = new int[3];
 			foreach (int number in numbers)
 			{
-				var remainder = Math.Abs(number % 3);
+				int remainder = Math.Abs(number % 3);
 				jaggedArray[remainder][index[remainder]] = number;
 				index[remainder]++;
 			}

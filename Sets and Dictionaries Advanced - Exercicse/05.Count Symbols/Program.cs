@@ -29,7 +29,6 @@ namespace _05.Count_Symbols
 				Console.WriteLine(key + ": " + value + " time/s");
 			}
 
-			//second solution
 		}
 	}
 }

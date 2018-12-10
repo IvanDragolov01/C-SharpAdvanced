@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 
 namespace _04.Copy_Binary_File
 {
@@ -7,10 +6,10 @@ namespace _04.Copy_Binary_File
 	{
 		static void Main(string[] args)
 		{
-			using (var sourceFile = new FileStream(
+			using (FileStream sourceFile = new FileStream(
 				@"D:\CSharpAdvance\C-SharpAdvanced\Streams\04.Copy Binary File\copyMe.png", FileMode.Open))
 			{
-				using (var destinacionFile = new FileStream(
+				using (FileStream destinacionFile = new FileStream(
 					@"D:\CSharpAdvance\C-SharpAdvanced\Streams\04.Copy Binary File\copiedfile.png", FileMode.Create))
 				{
 					byte[] buffer = new byte[4096];
@@ -20,7 +19,9 @@ namespace _04.Copy_Binary_File
 						int readBytesCount = sourceFile.Read(buffer, 0, buffer.Length);
 
 						if (readBytesCount == 0)
+						{
 							break;
+						}
 
 						destinacionFile.Write(buffer, 0, buffer.Length);
 					}

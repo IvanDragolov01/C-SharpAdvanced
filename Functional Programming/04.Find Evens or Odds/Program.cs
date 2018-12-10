@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+
 namespace Find_Evens_or_Odds
 {
 	class Program
