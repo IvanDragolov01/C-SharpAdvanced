@@ -28,7 +28,6 @@ namespace _05.Count_Symbols
 				int value = symbol.Value;
 				Console.WriteLine(key + ": " + value + " time/s");
 			}
-
 		}
 	}
 }
