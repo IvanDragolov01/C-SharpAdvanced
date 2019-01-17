@@ -68,8 +68,10 @@ namespace _03.Number_Wars
 		//					}
 		//				}
 		//				else
+		//				{
 		//					gameOver = true;
-		//				break;
+		//				}
+		//break;
 		//			}
 		//		}
 		//	}
@@ -80,7 +82,6 @@ namespace _03.Number_Wars
 		//	{
 		//		result = "Draw";
 		//	}
-
 		//	else if (firstAllCards.Count > secondAllCards.Count)
 		//	{
 		//		result = "First player wins";
@@ -307,8 +308,16 @@ namespace _03.Number_Wars
 			Symbol = symbol;
 		}
 
-		public int Number { get; set; }
+		public int Number
+		{
+			get;
+			set;
+		}
 
-		public char Symbol { get; set; }
+		public char Symbol
+		{
+			get;
+			set;
+		}
 	}
 }

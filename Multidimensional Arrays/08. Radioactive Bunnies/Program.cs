@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Linq;
+
 namespace _08._Radioactive_Bunnies
 {
 	class Program
 	{
-		static char[,] board;
-		static int playerRow;
-		static int playerCol;
-		static int rows;
-		static int columns;
+		static char[,] _board;
+		static int _playerRow;
+		static int _playerCol;
+		static int _rows;
+		static int _columns;
 
 		static void Main(string[] args)
 		{
@@ -17,7 +18,7 @@ namespace _08._Radioactive_Bunnies
 				.Select(int.Parse)
 				.ToArray();
 
-			board = ReadAndFillMatrix(dimensions);
+			_board = ReadAndFillMatrix(dimensions);
 			char[] movements = Console.ReadLine().ToCharArray();
 
 			foreach (char move in movements)
@@ -27,7 +28,7 @@ namespace _08._Radioactive_Bunnies
 
 				if (IsPlayerOnBoard())
 				{
-					if (board[playerRow, playerCol] == 'B')
+					if (_board[_playerRow, _playerCol] == 'B')
 					{
 						Die();
 					}
@@ -42,7 +43,7 @@ namespace _08._Radioactive_Bunnies
 		private static void Die()
 		{
 			PrintBoard();
-			Console.WriteLine($"dead: {playerRow} {playerCol}");
+			Console.WriteLine($"dead: {_playerRow} {_playerCol}");
 			Environment.Exit(0);
 		}
 
@@ -58,8 +59,8 @@ namespace _08._Radioactive_Bunnies
 
 		private static bool IsPlayerOnBoard()
 		{
-			bool validRow = playerRow >= 0 && playerRow < rows;
-			bool validCol = playerCol >= 0 && playerCol < columns;
+			bool validRow = _playerRow >= 0 && _playerRow < _rows;
+			bool validCol = _playerCol >= 0 && _playerCol < _columns;
 
 			if (validRow && validCol)
 			{
@@ -71,11 +72,11 @@ namespace _08._Radioactive_Bunnies
 
 		private static void PrintBoard()
 		{
-			for (int row = 0; row < rows; row++)
+			for (int row = 0; row < _rows; row++)
 			{
-				for (int col = 0; col < columns; col++)
+				for (int col = 0; col < _columns; col++)
 				{
-					Console.Write(board[row, col]);
+					Console.Write(_board[row, col]);
 				}
 
 				Console.WriteLine();
@@ -84,18 +85,18 @@ namespace _08._Radioactive_Bunnies
 
 		private static void MultiplyBunnies()
 		{
-			for (int row = 0; row < rows; row++)
+			for (int row = 0; row < _rows; row++)
 			{
-				for (int col = 0; col < columns; col++)
+				for (int col = 0; col < _columns; col++)
 				{
-					if (board[row, col] == 'B')
+					if (_board[row, col] == 'B')
 					{
 						if (row > 0)
 						{
 							NewBunny(row - 1, col);
 						}
 
-						if (row < rows - 1)
+						if (row < _rows - 1)
 						{
 							NewBunny(row + 1, col);
 						}
@@ -105,7 +106,7 @@ namespace _08._Radioactive_Bunnies
 							NewBunny(row, col - 1);
 						}
 
-						if (col < columns - 1)
+						if (col < _columns - 1)
 						{
 							NewBunny(row, col + 1);
 						}
@@ -113,13 +114,13 @@ namespace _08._Radioactive_Bunnies
 				}
 			}
 
-			for (int row = 0; row < rows; row++)
+			for (int row = 0; row < _rows; row++)
 			{
-				for (int col = 0; col < columns; col++)
+				for (int col = 0; col < _columns; col++)
 				{
-					if (board[row, col] == 'X')
+					if (_board[row, col] == 'X')
 					{
-						board[row, col] = 'B';
+						_board[row, col] = 'B';
 					}
 				}
 			}
@@ -127,63 +128,63 @@ namespace _08._Radioactive_Bunnies
 
 		private static void NewBunny(int row, int col)
 		{
-			if (board[row, col] != 'B')
+			if (_board[row, col] != 'B')
 			{
-				board[row, col] = 'X';
+				_board[row, col] = 'X';
 			}
 		}
 
 		private static int[] MovePlayer(char move)
 		{
-			int[] previousLocation = { playerRow, playerCol };
+			int[] previousLocation = { _playerRow, _playerCol };
 
 			switch (move)
 			{
 				case 'U':
-					playerRow--;
+					_playerRow--;
 					break;
 				case 'D':
-					playerRow++;
+					_playerRow++;
 					break;
 				case 'L':
-					playerCol--;
+					_playerCol--;
 					break;
 				case 'R':
-					playerCol++;
+					_playerCol++;
 					break;
 			}
 
-			if (IsPlayerOnBoard() && board[playerRow, playerCol] != 'B')
+			if (IsPlayerOnBoard() && _board[_playerRow, _playerCol] != 'B')
 			{
-				board[playerRow, playerCol] = 'P';
+				_board[_playerRow, _playerCol] = 'P';
 			}
 
 			int oldRow = previousLocation[0];
 			int oldCol = previousLocation[1];
-			board[oldRow, oldCol] = '.';
+			_board[oldRow, oldCol] = '.';
 
 			return previousLocation;
 		}
 
 		private static char[,] ReadAndFillMatrix(int[] dimensions)
 		{
-			rows = dimensions[0];
-			columns = dimensions[1];
+			_rows = dimensions[0];
+			_columns = dimensions[1];
 
-			char[,] matrix = new char[rows, columns];
+			char[,] matrix = new char[_rows, _columns];
 
-			for (int row = 0; row < rows; row++)
+			for (int row = 0; row < _rows; row++)
 			{
 				char[] rowInput = Console.ReadLine().ToCharArray();
 
-				for (int col = 0; col < columns; col++)
+				for (int col = 0; col < _columns; col++)
 				{
 					matrix[row, col] = rowInput[col];
 
 					if (rowInput[col] == 'P')
 					{
-						playerRow = row;
-						playerCol = col;
+						_playerRow = row;
+						_playerCol = col;
 					}
 				}
 			}

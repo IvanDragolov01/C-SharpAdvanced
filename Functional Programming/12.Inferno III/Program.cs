@@ -9,7 +9,8 @@ namespace _12.Inferno_III
 		static void Main(string[] args)
 		{
 			List<int> gems = Console.ReadLine().Split().Select(int.Parse).ToList();
-			Dictionary<string, Func<List<int>, List<int>>> filters = new Dictionary<string, Func<List<int>, List<int>>>();
+			Dictionary<string, Func<List<int>, List<int>>> filters = new Dictionary<string, 
+				Func<List<int>, List<int>>>();
 			string command;
 
 			while ((command = Console.ReadLine()) != "Forge")

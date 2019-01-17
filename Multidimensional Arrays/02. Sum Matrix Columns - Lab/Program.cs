@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+
 namespace _02._Sum_Matrix_Columns
 {
 	class Program

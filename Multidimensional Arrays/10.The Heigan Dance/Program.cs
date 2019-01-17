@@ -5,33 +5,33 @@ namespace TheHeiganDance
 {
 	class Program
 	{
-		const int min = 0;
-		const int max = 14;
-		static int playerRow = 7;
-		static int playerCol = 7;
-		static string causeOfDeath;
-		const int cloudDamage = 3500;
-		const int eruptionDamage = 6000;
-		static double heiganHealth = 3000000.0;
-		static int playerHealth = 18500;
-		static bool hasCloud = false;
+		const int Min = 0;
+		const int Max = 14;
+		const int CloudDamage = 3500;
+		const int EruptionDamage = 6000;
+		static int _playerRow = 7;
+		static int _playerCol = 7;
+		static string _causeOfDeath;
+		static double _heiganHealth = 3000000.0;
+		static int _playerHealth = 18500;
+		static bool _hasCloud = false;
 
 		static void Main(string[] args)
 		{
 			double playerDamage = double.Parse(Console.ReadLine());
 
-			while (playerHealth > 0)
+			while (_playerHealth > 0)
 			{
-				heiganHealth -= playerDamage;
+				_heiganHealth -= playerDamage;
 
-				if (hasCloud)
+				if (_hasCloud)
 				{
-					playerHealth -= cloudDamage;
-					hasCloud = false;
-					causeOfDeath = "Plague Cloud";
+					_playerHealth -= CloudDamage;
+					_hasCloud = false;
+					_causeOfDeath = "Plague Cloud";
 				}
 
-				if (heiganHealth <= 0 || playerHealth <= 0)
+				if (_heiganHealth <= 0 || _playerHealth <= 0)
 				{
 					break;
 				}
@@ -40,30 +40,30 @@ namespace TheHeiganDance
 				string spellName = spellTokens[0];
 				int rowHit = int.Parse(spellTokens[1]);
 				int colHit = int.Parse(spellTokens[2]);
-				int[][] damageArea = getDamageArea(rowHit, colHit);
+				int[][] damageArea = GetDamageArea(rowHit, colHit);
 
-				if (isPlayerInDamageZone(damageArea))
+				if (IsPlayerInDamageZone(damageArea))
 				{
-					tryToMove(damageArea, spellName);
+					TryToMove(damageArea, spellName);
 
 				}
 			}
 
-			string heiganFinish = heiganHealth > 0 ? heiganHealth.ToString("f2") : "Defeated!";
-			string playerFinish = playerHealth > 0 ? playerHealth.ToString() : $"Killed by {causeOfDeath}";
+			string heiganFinish = _heiganHealth > 0 ? _heiganHealth.ToString("f2") : "Defeated!";
+			string playerFinish = _playerHealth > 0 ? _playerHealth.ToString() : $"Killed by {_causeOfDeath}";
 			Console.WriteLine($"Heigan: {heiganFinish}");
 			Console.WriteLine($"Player: {playerFinish}");
-			Console.WriteLine($"Final position: {playerRow}, {playerCol}");
+			Console.WriteLine($"Final position: {_playerRow}, {_playerCol}");
 		}
 
-		private static bool isPlayerInDamageZone(int[][] damageArea)
+		private static bool IsPlayerInDamageZone(int[][] damageArea)
 		{
-			bool isInRowsHit = damageArea[0].Contains(playerRow);
-			bool isInColsHit = damageArea[1].Contains(playerCol);
+			bool isInRowsHit = damageArea[0].Contains(_playerRow);
+			bool isInColsHit = damageArea[1].Contains(_playerCol);
 			return isInRowsHit && isInColsHit;
 		}
 
-		private static int[][] getDamageArea(int rowHit, int colHit)
+		private static int[][] GetDamageArea(int rowHit, int colHit)
 		{
 			int[][] damageArea = new int[2][];
 			damageArea[0] = new int[3];
@@ -82,47 +82,47 @@ namespace TheHeiganDance
 			return damageArea;
 		}
 
-		private static void tryToMove(int[][] damageArea, string spellName)
+		private static void TryToMove(int[][] damageArea, string spellName)
 		{
-			int rowAbove = playerRow - 1;
-			int rowBelow = playerRow + 1;
-			int leftCol = playerCol - 1;
-			int rightCol = playerCol + 1;
+			int rowAbove = _playerRow - 1;
+			int rowBelow = _playerRow + 1;
+			int leftCol = _playerCol - 1;
+			int rightCol = _playerCol + 1;
 
-			if (playerRow - 1 >= min && !damageArea[0].Contains(rowAbove))
+			if (_playerRow - 1 >= Min && !damageArea[0].Contains(rowAbove))
 			{
-				playerRow = rowAbove;
+				_playerRow = rowAbove;
 			}
-			else if (rightCol <= max && !damageArea[1].Contains(rightCol))
+			else if (rightCol <= Max && !damageArea[1].Contains(rightCol))
 			{
-				playerCol = rightCol;
+				_playerCol = rightCol;
 			}
-			else if (rowBelow <= max && !damageArea[0].Contains(rowBelow))
+			else if (rowBelow <= Max && !damageArea[0].Contains(rowBelow))
 			{
-				playerRow = rowBelow;
+				_playerRow = rowBelow;
 			}
-			else if (leftCol >= min && !damageArea[1].Contains(leftCol))
+			else if (leftCol >= Min && !damageArea[1].Contains(leftCol))
 			{
-				playerCol = leftCol;
+				_playerCol = leftCol;
 			}
 			else
 			{
-				takeDamage(spellName);
+				TakeDamage(spellName);
 			}
 		}
 
-		private static void takeDamage(string spellName)
+		private static void TakeDamage(string spellName)
 		{
 			if (spellName == "Cloud")
 			{
-				playerHealth -= cloudDamage;
-				hasCloud = true;
-				causeOfDeath = "Plague Cloud";
+				_playerHealth -= CloudDamage;
+				_hasCloud = true;
+				_causeOfDeath = "Plague Cloud";
 			}
 			else
 			{
-				playerHealth -= eruptionDamage;
-				causeOfDeath = "Eruption";
+				_playerHealth -= EruptionDamage;
+				_causeOfDeath = "Eruption";
 			}
 		}
 	}

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+
 namespace RubiksMatrix
 {
 	class Program
@@ -77,7 +78,8 @@ namespace RubiksMatrix
 					int srch = Array.IndexOf(flatRubik, ie + 1);
 					flatRubik[srch] = temp;
 					flatRubik[ie] = ie + 1;
-					Console.WriteLine($"Swap ({ie / size[0]}, {ie % size[1]}) with ({srch / size[0]}, {srch % size[1]})");
+					Console.WriteLine($"Swap ({ie / size[0]}, {ie % size[1]}) with ({srch / size[0]}," +
+						$" {srch % size[1]})");
 				}
 			}
 		}

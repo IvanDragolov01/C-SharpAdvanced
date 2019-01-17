@@ -4,9 +4,9 @@ namespace _11._Parking_System
 {
 	class Program
 	{
-		static bool[][] parking;
-		static int rows;
-		static int cols;
+		static bool[][] _parking;
+		static int _rows;
+		static int _cols;
 
 		static void Main(string[] args)
 		{
@@ -15,9 +15,9 @@ namespace _11._Parking_System
 				.Select(int.Parse)
 				.ToArray();
 
-			rows = dimensions[0];
-			cols = dimensions[1];
-			parking = new bool[rows][];
+			_rows = dimensions[0];
+			_cols = dimensions[1];
+			_parking = new bool[_rows][];
 			string command;
 
 			while ((command = Console.ReadLine()) != "stop")
@@ -51,12 +51,12 @@ namespace _11._Parking_System
 
 		private static void MarkSpotAsTaken(int targetRow, int targetCol)
 		{
-			if (parking[targetRow] == null)
+			if (_parking[targetRow] == null)
 			{
-				parking[targetRow] = new bool[cols];
+				_parking[targetRow] = new bool[_cols];
 			}
 
-			parking[targetRow][targetCol] = true;
+			_parking[targetRow][targetCol] = true;
 		}
 
 		private static int TryFindFreeSpot(int targetRow, int targetCol)
@@ -64,9 +64,9 @@ namespace _11._Parking_System
 			int parkingCol = 0;
 			int bestDistance = int.MaxValue;
 			//int bestDistance = 10001 same result
-			for (int currentcol = 1; currentcol < cols; currentcol++)
+			for (int currentcol = 1; currentcol < _cols; currentcol++)
 			{
-				if (!parking[targetRow][currentcol])
+				if (!_parking[targetRow][currentcol])
 				{
 					int distance = Math.Abs(currentcol - targetCol);
 
@@ -83,7 +83,7 @@ namespace _11._Parking_System
 
 		private static bool IsSpotTaken(int targetRow, int targetCol)
 		{
-			return parking[targetRow] != null && parking[targetRow][targetCol];
+			return _parking[targetRow] != null && _parking[targetRow][targetCol];
 		}
 	}
 }
